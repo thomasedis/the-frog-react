@@ -1,0 +1,62 @@
+.banner-wrapper{
+    background-color: $color-primary;
+  
+}
+.banner{
+    height: 500px;
+    display: flex;
+    .slick-list{
+        height: 100%;
+    }
+    &__item{
+        height: 100%;
+        display: flex;
+        background-image: url('../../image/bg_banner.png');
+        background-size: contain;
+        
+        &-img{
+          
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 10px;
+            padding-right: 100px;
+            overflow: hidden;
+            img{
+                height: 100%;
+                transform: translateY(150%);
+                animation-duration: 1s;
+            };
+        }
+        &-text{
+           position: absolute;
+           top: 25%;
+           padding: 10px 100px;
+           width: 900px;
+           span{
+               display: block;
+           }
+           .title{
+               font-size: 5rem;
+               font-weight: bold;
+               color: $color-secondary-light;
+               text-align: center;
+               padding: 10px 0;
+           }
+           .sub-title{
+               font-size: 1.5rem;
+            
+               font-weight: 300;
+           }
+           .sub-title2{
+               font-size: 1.5rem;
+               color: #999;
+               font-weight: 300;
+           }
+        }
+    }
+}
+
+.slick-track{
+    height: 100%;
+}

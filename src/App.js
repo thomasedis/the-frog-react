@@ -1,24 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import HeaderTop from './components/HeaderTop'
+import Header from './components/Header';
+import Menu from './components/Menu';
+import HomeBanner from './components/HomeBanner';
+import Content from './components/Content';
+import Selling from './components/Selling';
+import Deal from './components/Deal';
+import Tips from './components/Tips';
+import FooterBanner from './components/FooterBanner';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+  {/* Header Top */}
+  <HeaderTop />
+  {/* Header */}
+    <Header/>
+  {/* Menu */}
+    <Menu/>
+  {/* Home Banner */}
+    <HomeBanner/>
+  <div className="wrapper-content-selling">
+    {/* Content */}
+    <Content/>
+    {/* Selling */}
+    <Selling/>
+  </div>
+  
+  <div className="backround-deal-tips">
+    {/* Deal */}
+    <Deal/>
+    {/* Tips */}
+    <Tips/>
+  </div>
+  {/* footer-banner */}
+    <FooterBanner/>
+  {/* footer */}
+    <Footer/>
+  </div>
+
     </div>
   );
 }

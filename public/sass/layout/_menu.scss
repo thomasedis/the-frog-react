@@ -1,0 +1,101 @@
+.menu-wrapper{
+    background-color: $color-primary;
+    border-bottom: 1px solid #444;
+}
+.menu{
+   padding:  0;
+    &__main{
+        ul{
+            list-style: none;
+            display: flex;
+            li{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 500;
+                font-size: 1.5rem;
+                .icon{
+                    padding-right: 10px;
+                }
+                transition: 0.2s all;
+                &:hover{
+                    span{
+                        color: $color-secondary-light;
+                    }
+                    
+                    .link{
+                        color: $color-secondary-light;
+                    }
+                }
+            }
+            li.categories{
+                border-right: 1px solid #333;
+                position: relative;
+                z-index: 1;
+               
+                &:hover{
+                    .categories__sub{
+                        display: block;
+                    }
+                }
+                .link{
+                     padding-left: 0;
+                }
+                .categories__sub{
+                    position: absolute;
+                    top: calc(100% + 1px);
+                    left: 0;
+                    width: 100%;
+                    background-color: $color-primary-dark;
+                    display: none;
+                    opacity: 0.9;
+                    animation: item-header-sub 0.2s linear;
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                    }
+                    li{
+                        width: 100%; 
+                        
+                    }
+                    &-link{
+                        color: $text-color;
+                        display: block;
+                        text-decoration: none;
+                        padding: 8px 25px;
+                        transition: 0.2s all;
+                        width: 100%;
+                        text-transform: uppercase;
+                        font-size: 1.4rem;
+                        border-bottom: 1px solid #222;
+                        &:hover{
+                            color: $color-secondary-light;
+                        }
+                    }
+                }
+            }
+            li.active{
+                .link{
+                    font-weight: bold;
+                    color: $color-secondary-light;
+                }
+            }
+            .link{
+                color: $text-color;
+                display: block;
+                text-decoration: none;
+                padding: 15px 20px;
+                transition: 0.2s all;
+            }
+        }
+    }
+}
+.menu-wrapper__scroll{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    animation: header-scroll 0.3s linear;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
