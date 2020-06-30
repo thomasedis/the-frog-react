@@ -1,48 +1,39 @@
 import React from 'react';
+import Notifications from 'react-notify-toast';
+import Footer from './components/home/Footer';
+import Menu from './components/home/Menu';
+import routes from './routes';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
-import HeaderTop from './components/HeaderTop'
-import Header from './components/Header';
-import Menu from './components/Menu';
-import HomeBanner from './components/HomeBanner';
-import Content from './components/Content';
-import Selling from './components/Selling';
-import Deal from './components/Deal';
-import Tips from './components/Tips';
-import FooterBanner from './components/FooterBanner';
-import Footer from './components/Footer';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <div>
-  {/* Header Top */}
-  <HeaderTop />
-  {/* Header */}
-    <Header/>
-  {/* Menu */}
-    <Menu/>
-  {/* Home Banner */}
-    <HomeBanner/>
-  <div className="wrapper-content-selling">
-    {/* Content */}
-    <Content/>
-    {/* Selling */}
-    <Selling/>
-  </div>
-  
-  <div className="backround-deal-tips">
-    {/* Deal */}
-    <Deal/>
-    {/* Tips */}
-    <Tips/>
-  </div>
-  {/* footer-banner */}
-    <FooterBanner/>
-  {/* footer */}
-    <Footer/>
-  </div>
 
-    </div>
+  function  showContentMenu(routes){
+    var result = null
+    if(routes.length > 0){
+      result = routes.map((route, index)=>{
+        return(
+            <Route key={index} path={route.path} exact={route.exact} component={route.main}/>  
+          )
+      })
+    }
+    return result
+  } 
+  return (
+    <Router>   
+     <Notifications/>
+      <Menu/>
+      <Switch>
+         {showContentMenu(routes)}
+      </Switch>
+      <Footer/>
+    </Router>   
   );
 }
 
