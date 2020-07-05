@@ -1,6 +1,18 @@
 import React from 'react'
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 export default function Tips() {
+    const settings= {
+        dots: true,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnHover: false,
+      };
     return (
         <div className="grid">
             <div className="tips-wrapper">
@@ -10,8 +22,8 @@ export default function Tips() {
                     <h1>TIPS</h1>
                 </div>
                 <div className="row no-gutter"> 
-                    <div className="tips__content">
-                    <div className="l-3 m-3  tips__contents-item-padding">
+                    <Slider className="tips__content" {...settings}>
+                    <div className="tips__contents-item-padding">
                         <div className="tips__content-item">
                         <div className="tips__content-item--img">
                             <img src="./image/t-shirt.jpg" alt="imgg" />
@@ -24,7 +36,7 @@ export default function Tips() {
                         </div>
                         </div>
                     </div>
-                    <div className="l-3 m-3  tips__contents-item-padding">
+                    <div className="tips__contents-item-padding">
                         <div className="tips__content-item">
                         <div className="tips__content-item--img">
                             <img src="./image/t-shirt.jpg" alt="imgg" />
@@ -37,7 +49,7 @@ export default function Tips() {
                         </div>
                         </div>
                     </div>
-                    <div className="l-3 m-3  tips__contents-item-padding">
+                    <div className="tips__contents-item-padding">
                         <div className="tips__content-item">
                         <div className="tips__content-item--img">
                             <img src="./image/t-shirt.jpg" alt="imgg" />
@@ -50,7 +62,7 @@ export default function Tips() {
                         </div>
                         </div>
                     </div>
-                    <div className="l-3 m-3  tips__contents-item-padding">
+                    <div className="tips__contents-item-padding">
                         <div className="tips__content-item">
                         <div className="tips__content-item--img">
                             <img src="./image/t-shirt.jpg" alt="imgg" />
@@ -63,7 +75,7 @@ export default function Tips() {
                         </div>
                         </div>
                     </div> 
-                    <div className="l-3 m-3  tips__contents-item-padding">
+                    <div className="tips__contents-item-padding">
                         <div className="tips__content-item">
                         <div className="tips__content-item--img">
                             <img src="./image/t-shirt.jpg" alt="imgg" />
@@ -76,7 +88,7 @@ export default function Tips() {
                         </div>
                         </div>
                     </div> 
-                    </div>
+                    </Slider>
                 </div>
                 </div>
             </div>

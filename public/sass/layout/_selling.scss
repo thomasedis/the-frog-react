@@ -27,6 +27,7 @@
         display: flex;
         &-item-padding{
             padding: 0 20px;
+            outline: none;
         }
         &-item{
             width: 100%;
@@ -37,6 +38,7 @@
             border-radius: 10px;
             position: relative;
             overflow: hidden;
+            outline: none;
             &:hover{
                 .selling__slide-item--overlay{
                     display: block;

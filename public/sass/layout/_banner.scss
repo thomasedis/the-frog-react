@@ -9,11 +9,12 @@
         height: 100%;
     }
     &__item{
-        height: 100%;
+        // height: 100%;
         display: flex;
         background-image: url('../../image/bg_banner.png');
         background-size: contain;
-        
+        height: 500px;
+        outline: none;
         &-img{
           
             height: 100%;

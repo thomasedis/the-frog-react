@@ -8,7 +8,7 @@ import Content from './Content';
 import Selling from './Selling';
 import Deal from './Deal';
 import Tips from './Tips';
-import FooterBanner from './FooterBanner';
+
 
 
 function Home() {
@@ -29,8 +29,7 @@ function Home() {
             {/* Tips */}
             <Tips/>
         </div>
-        {/* footer-banner */}
-            <FooterBanner/>
+        
         </div>
   );
 }

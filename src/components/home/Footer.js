@@ -34,15 +34,18 @@ export default function Footer() {
                 </div>
                 <div className="l-4 m-4">
                     <div className="footer__right">
-                    <h1>NEWSLETTER</h1>
-                    <span>Get instant updates about our new products and special promos!</span>
-                    <div className="footer__right-img">
-                        <img src="./image/letter-footer.png" alt="imgg" />
-                    </div>
-                    <form action className="footer__right-form">
-                        <input type="email" placeholder="Your email address..." />
-                        <button>SUBSCRIBE</button>
-                    </form>
+                        <h1>NEWSLETTER</h1>
+                        <span>Get instant updates about our new products and special promos!</span>
+                        <div className="footer__right-img">
+                            <img src="./image/letter-footer.png" alt="imgg" />
+                        </div>
+                        <form action className="footer__right-form">
+                            <input type="email" placeholder="Your email address..." />
+                            <button>SUBSCRIBE</button>
+                        </form>
+                        <div className="footer__right-payment">
+                            <img src="./image/payment.png" alt="imgg" />
+                        </div>
                     </div>
                 </div>
                 </div>  

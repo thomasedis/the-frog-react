@@ -1,9 +1,13 @@
 import React from 'react'
+import ShopTop from './ShopTop'
+import ShopContent from './ShopContent'
 
 export default function Shop() {
     return (
-        <div>
-            <h1>SHOP</h1>
+        <div className="grid">
+            <ShopTop/>
+            <ShopContent/>
         </div>
+
     )
 }

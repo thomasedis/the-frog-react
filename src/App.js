@@ -8,6 +8,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import FooterBanner from './components/home/FooterBanner';
 
 
 
@@ -32,6 +33,7 @@ function App() {
       <Switch>
          {showContentMenu(routes)}
       </Switch>
+      <FooterBanner/>
       <Footer/>
     </Router>   
   );
