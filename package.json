@@ -24,9 +24,12 @@
   },
   "scripts": {
     "sasstocss": "node-sass ./public/sass/index.scss ./public/css/index.css -w",
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
+    "start-wb": "react-app-rewired start",
+    "start": "react-scripts start",
+    "build-wb": "react-app-rewired build",
+    "build": "react-scripts build",
+    "test-wb": "react-app-rewired test",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
