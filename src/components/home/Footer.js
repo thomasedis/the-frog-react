@@ -39,7 +39,7 @@ export default function Footer() {
                         <div className="footer__right-img">
                             <img src="./image/letter-footer.png" alt="imgg" />
                         </div>
-                        <form action className="footer__right-form">
+                        <form className="footer__right-form">
                             <input type="email" placeholder="Your email address..." />
                             <button>SUBSCRIBE</button>
                         </form>

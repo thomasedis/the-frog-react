@@ -15,32 +15,33 @@ export default function ShopTop() {
     return (
         <div className="shop-top">
             <div className="grid wide">
-            <div className="shop-top__title">
-                <h1>SHOP</h1>
-            </div>
-            <Slider className="shop-top__slide" {...settings}>
-                <div className="shop-top__slide-item">
-                    <img src="./image/s_tshirt.png" alt="imgg" />
+                <div className="shop-top__title">
+                    <h1>SHOP</h1>
                 </div>
-                <div className="shop-top__slide-item">
-                    <img src="./image/s_hoodies.png" alt="imgg" />
-                </div>
-                <div className="shop-top__slide-item">
-                    <img src="./image/s_pants.png" alt="imgg" />
-                </div>
-                <div className="shop-top__slide-item">
-                    <img src="./image/s_shorts.png" alt="imgg" />
-                </div>
-                <div className="shop-top__slide-item">
-                    <img src="./image/s_balo.png" alt="imgg" />
-                </div>
-                <div className="shop-top__slide-item">
-                    <img src="./image/s_wallet.png" alt="imgg" />
-                </div>
-                <div className="shop-top__slide-item">
-                    <img src="./image/s_jackets.png" alt="imgg" />
-                </div>
-            </Slider>
+                <Slider className="shop-top__slide" {...settings}>
+                    <div className="shop-top__slide-item">
+                        <img src="./image/s_tshirt.png" alt="imgg" />
+                    </div>
+                    <div className="shop-top__slide-item">
+                        <img src="./image/s_hoodies.png" alt="imgg" />
+                    </div>
+                    <div className="shop-top__slide-item">
+                        <img src="./image/s_pants.png" alt="imgg" />
+                    </div>
+                    <div className="shop-top__slide-item">
+                        <img src="./image/s_shorts.png" alt="imgg" />
+                    </div>
+                    <div className="shop-top__slide-item">
+                        <img src="./image/s_balo.png" alt="imgg" />
+                    </div>
+                    <div className="shop-top__slide-item">
+                        <img src="./image/s_wallet.png" alt="imgg" />
+                    </div>
+                    <div className="shop-top__slide-item">
+                        <img src="./image/s_jackets.png" alt="imgg" />
+                    </div>
+                </Slider>
+                
             </div>
         </div>
             
