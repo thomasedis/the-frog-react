@@ -1,12 +1,16 @@
 import React, {useState, useEffect} from 'react'
-import productApi from '../../api/productsApi'
+import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import * as actions from '../../actions/shops/index'
+
 export default function ShopContent(props) {
-    const [data, setData] = useState([])
+   
     const [page, setPage] = useState(1)
     const [category, setCagegory] = useState("all")
     const [limit] = useState(6)
     const {categories} = props
-    
+    const dispatch = useDispatch()
+    const data = useSelector(state => state.shops)
     useEffect(() =>{
         if(categories){
             setCagegory(categories)
@@ -14,25 +18,13 @@ export default function ShopContent(props) {
     },[categories])
     
     useEffect(() => {
-       const fetchProductList = async () =>{
-       
-           try {
-                let params = {
-                    page,
-                    limit,
-                    category
-                }
-              const response = await productApi.getAll(params);
-            
-              if(response.error === false){
-                    setData(response.data);
-              }
-   
-           } catch (error) {
-               console.log('Failed to fetch products api: ', error)
-           }
-       }
-       fetchProductList()
+        let params = {
+            page,
+            limit,
+            category
+        }
+       dispatch(actions.actFetchShopsRequest(params))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [page, limit, category])
     const handleNext = ()=>{
         setPage(page +1)

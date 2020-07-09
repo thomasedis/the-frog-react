@@ -1,4 +1,4 @@
-import React, {useEffect}from 'react';
+import React from 'react';
 import Notifications from 'react-notify-toast';
 import Footer from './components/home/Footer';
 import Menu from './components/home/Menu';
@@ -9,9 +9,6 @@ import {
   Route
 } from "react-router-dom";
 import FooterBanner from './components/home/FooterBanner';
-
-
-
 
 function App() {
 
