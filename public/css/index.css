@@ -419,6 +419,9 @@ html {
           border-bottom: 1px solid #222; }
           .menu__main ul li.categories .categories__sub-link:hover {
             color: #058301; }
+        .menu__main ul li.categories .categories__sub-linkActive {
+          color: #058301;
+          font-weight: bold; }
     .menu__main ul li.active .link {
       font-weight: bold;
       color: #058301; }
@@ -523,6 +526,7 @@ html {
         flex-direction: column;
         align-items: center; }
         .content__center-overlay--sub span {
+          color: #ebebeb;
           font-size: 3rem;
           transition: 0.2s all; }
         .content__center-overlay--sub i {
@@ -785,17 +789,20 @@ html {
           font-weight: bold; }
   .deal__right-buynow {
     width: fit-content;
-    padding: 5px 10px;
+    padding: 5px 20px;
     background-color: #484848;
-    margin-top: 20px;
+    margin-top: 30px;
     border-radius: 10px;
     cursor: pointer;
-    transition: 0.2s all; }
+    transition: 0.2s all;
+    border: 1px solid #999; }
     .deal__right-buynow:hover {
       background-color: #212121; }
     .deal__right-buynow--text {
       font-size: 1.4rem;
-      font-weight: bold; }
+      font-weight: bold;
+      color: #ebebeb;
+      text-decoration: none; }
       .deal__right-buynow--text-icon {
         padding-left: 3px; }
   .deal__right-banner {
@@ -1058,7 +1065,8 @@ html {
       font-weight: bold;
       width: fit-content;
       position: relative;
-      margin: 0 auto; }
+      margin: 0 auto;
+      text-transform: uppercase; }
       .shop-top__title h1::before {
         content: '';
         position: absolute;
@@ -1128,12 +1136,10 @@ html {
         .shop__category-wrap li:hover a {
           transform: translateX(10px);
           color: #058301; }
-      .shop__category-wrap li.shop__category-active {
-        color: #058301; }
-        .shop__category-wrap li.shop__category-active a {
-          font-size: 1.5rem;
-          color: #058301;
-          font-weight: bold; }
+      .shop__category-wrap li a.shop__category-active {
+        color: #058301;
+        font-size: 1.5rem;
+        font-weight: bold; }
       .shop__category-wrap a {
         transition: 0.2s all;
         text-decoration: none;
@@ -1194,7 +1200,7 @@ html {
     .shop__category-popular--wrap {
       margin-top: 20px;
       padding: 0 5px;
-      padding-bottom: 10px; }
+      padding-bottom: 29px; }
       .shop__category-popular--wrap-item {
         height: 70px;
         display: flex;
@@ -1215,18 +1221,20 @@ html {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          padding: 0 5px; }
+          padding: 0 10px; }
           .shop__category-popular--wrap-item .popular-content__name {
             display: -webkit-box;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 1;
             overflow: hidden;
             cursor: pointer;
-            transition: 0.2s all; }
+            text-transform: uppercase;
+            transition: 0.2s all;
+            font-size: 1.4rem; }
             .shop__category-popular--wrap-item .popular-content__name:hover {
               color: #058301; }
           .shop__category-popular--wrap-item .popular-content__price {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: #b4b4b4; }
   .shop__contentBackground {
     background-image: url("../../image/bg_banner.png");
@@ -1258,6 +1266,7 @@ html {
         .shop__content-sort--icon:hover {
           color: #212121; }
     .shop__content-item {
+      height: 400px;
       width: 100%;
       padding: 10px;
       background-color: #484848; }
@@ -1323,12 +1332,17 @@ html {
         justify-content: center;
         align-items: center; }
         .shop__content-item--sub .name {
+          height: 61px;
           font-weight: bold;
           cursor: pointer;
           transition: 0.2s all;
           display: -webkit-box;
           -webkit-box-orient: vertical;
-          -webkit-line-clamp: 1; }
+          -webkit-line-clamp: 2;
+          text-align: center;
+          overflow: hidden;
+          text-transform: uppercase;
+          font-size: 1.2rem; }
           .shop__content-item--sub .name:hover {
             color: #058301; }
         .shop__content-item--sub .price span {
@@ -1352,6 +1366,7 @@ html {
           list-style: none;
           display: flex; }
           .shop__content-pagination--wrap ul li {
+            cursor: pointer;
             margin: 0 1px; }
           .shop__content-pagination--wrap ul li.shop__content-pagination--active a {
             color: #07dc00; }

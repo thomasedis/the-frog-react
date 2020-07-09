@@ -23,7 +23,7 @@ export default function HomeBanner() {
             <Slider  className="banner" {...settings}>
                 <div className="banner__item">
                     <div className="banner__item-img">
-                        <img className="animate__animated animate__backInUp" src="./image/nnuu.png" alt="img" />
+                        <img className="animate__animated animate__backInUp" src="https://res.cloudinary.com/the-frog/image/upload/v1594302109/the-frog-main/nnuu_y9wa8i.png" alt="img" />
                     </div>
                     <div className="banner__item-text">
                         <span className="title animate__animated animate__tada animate__delay-0.5s">THE FROG</span>
@@ -33,7 +33,7 @@ export default function HomeBanner() {
                     </div>
                 <div className="banner__item">
                     <div className="banner__item-img">
-                        <img className="animate__animated animate__backInUp" src="./image/nnuu2.png" alt="img" />
+                        <img className="animate__animated animate__backInUp" src="https://res.cloudinary.com/the-frog/image/upload/v1594302109/the-frog-main/nnuu2_cjvvck.png" alt="img" />
                     </div>
                     <div className="banner__item-text">
                         <span className="title animate__animated animate__tada animate__delay-0.5s">THE FROG</span>

@@ -107,14 +107,14 @@
         }
         &-buynow{
             width: fit-content;
-            padding: 5px 10px;
+            padding: 5px 20px;
             background-color: $color-primary-light;
-            margin-top: 20px;
+            margin-top: 30px;
             border-radius: 10px;
             cursor: pointer;
             transition: 0.2s all;
             // animation: buyNow 1.2s infinite linear;
-            
+            border: 1px solid #999;
             &:hover{
                 // color: $color-secondary-light;
                 background-color: $color-primary;
@@ -122,6 +122,8 @@
             &--text{
                 font-size: 1.4rem;
                 font-weight: bold;
+                color: $text-color;
+                text-decoration: none;
                 &-icon{
                     padding-left: 3px;
                 }

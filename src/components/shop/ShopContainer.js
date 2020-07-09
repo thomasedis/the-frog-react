@@ -3,6 +3,7 @@ import ShopCategory from './ShopCategory'
 import ShopContent from './ShopContent'
 
 export default function ShopContainer() {
+   
     return (
         <div className="shop-content-wrapper">
             <div className="grid wide">

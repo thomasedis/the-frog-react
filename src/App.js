@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect}from 'react';
 import Notifications from 'react-notify-toast';
 import Footer from './components/home/Footer';
 import Menu from './components/home/Menu';
@@ -26,6 +26,7 @@ function App() {
     }
     return result
   } 
+
   return (
     <Router>   
      <Notifications/>

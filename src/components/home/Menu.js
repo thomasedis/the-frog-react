@@ -34,35 +34,35 @@ export default function Menu() {
                        
                         <li className="categories">
                         <span className="icon"><i className="fa fa-stream" aria-hidden="true" /></span>
-                        <NavLink className="link" to="/s" activeClassName="active">CATEGORIES</NavLink>
+                        <NavLink className="link" to="/shops" activeClassName="active">CATEGORIES</NavLink>
                         <div className="categories__sub">
                             <ul>
                             <li>
-                                <NavLink className="categories__sub-link" to="/s" activeClassName="active">T - Shirt</NavLink>               
+                                <NavLink className="categories__sub-link" to="/shops/t-shirt" activeClassName="categories__sub-linkActive">T - Shirt</NavLink>               
                             </li>
                             <li>
-                                <NavLink className="categories__sub-link" to="/s" activeClassName="active">Hoodie</NavLink>            
+                                <NavLink className="categories__sub-link" to="/shops/hoodies" activeClassName="categories__sub-linkActive">Hoodie</NavLink>            
                             </li>
                             <li>
-                                <NavLink className="categories__sub-link" to="/s" activeClassName="active">Jackets</NavLink>             
+                                <NavLink className="categories__sub-link" to="/shops/jackets" activeClassName="categories__sub-linkActive">Jackets</NavLink>             
                             </li>
                             <li>
-                                <NavLink className="categories__sub-link" to="/s" activeClassName="active">Pants</NavLink>     
+                                <NavLink className="categories__sub-link" to="/shops/pants" activeClassName="categories__sub-linkActive">Pants</NavLink>     
                             </li>
                             <li>
-                                <NavLink className="categories__sub-link" to="/s" activeClassName="active">Shorts</NavLink>
+                                <NavLink className="categories__sub-link" to="/shops/shorts" activeClassName="categories__sub-linkActive">Shorts</NavLink>
                             </li>
                             <li>
-                                <NavLink className="categories__sub-link" to="/s" activeClassName="active">Wallets</NavLink>
+                                <NavLink className="categories__sub-link" to="/shops/wallet" activeClassName="categories__sub-linkActive">Wallet</NavLink>
                             </li>
                             <li>
-                                <NavLink className="categories__sub-link" to="/s" activeClassName="active">Bags</NavLink>   
+                                <NavLink className="categories__sub-link" to="/shops/balo" activeClassName="categories__sub-linkActive">Balo</NavLink>   
                             </li>
                             </ul>
                         </div>
                         </li>
                         <MenuLink label='HOME' to='/' activeOnlyWhenExact={true} />
-                        <MenuLink label='SHOP' to='/shops' activeOnlyWhenExact={true} />
+                        <MenuLink label='SHOP' to='/shops' activeOnlyWhenExact={false} />
                         <MenuLink label='BLOG' to='/s' activeOnlyWhenExact={true} />
                         <MenuLink label='ABOUTE US' to='/s' activeOnlyWhenExact={true} />
                        

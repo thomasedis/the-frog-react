@@ -74,6 +74,10 @@
                             color: $color-secondary-light;
                         }
                     }
+                    &-linkActive{
+                        color: $color-secondary-light;
+                        font-weight: bold;
+                    }
                 }
             }
             li.active{

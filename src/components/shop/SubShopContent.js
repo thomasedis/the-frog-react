@@ -1,18 +1,26 @@
 import React, {useState, useEffect} from 'react'
 import productApi from '../../api/productsApi'
-export default function ShopContent() {
+export default function ShopContent(props) {
     const [data, setData] = useState([])
     const [page, setPage] = useState(1)
-    const [category, setCategory] = useState("all")
-    const [limit] = useState(9)
-  
+    const [category, setCagegory] = useState("all")
+    const [limit] = useState(6)
+    const {categories} = props
+    
+    useEffect(() =>{
+        if(categories){
+            setCagegory(categories)
+        }
+    },[categories])
+    
     useEffect(() => {
        const fetchProductList = async () =>{
+       
            try {
                 let params = {
                     page,
                     limit,
-                    
+                    category
                 }
               const response = await productApi.getAll(params);
             
@@ -25,7 +33,7 @@ export default function ShopContent() {
            }
        }
        fetchProductList()
-    }, [page, limit])
+    }, [page, limit, category])
     const handleNext = ()=>{
         setPage(page +1)
     }
@@ -68,7 +76,9 @@ export default function ShopContent() {
     })
     :
     shopItem = (
+        <>
         <h1>Loadingg</h1>
+        </>
     )
     return (
         <div className="shop__content">

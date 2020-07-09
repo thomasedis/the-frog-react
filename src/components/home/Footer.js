@@ -25,10 +25,10 @@ export default function Footer() {
                         <span><i className="fas fa-map-marker-alt" /></span> KTX ĐHQG Khu B, TP.HỒ CHÍ MINH
                     </div>
                     <div className="footer__center-phone">
-                        <span><i className="fa fa-envelope" aria-hidden="true" /></span> 0372924454
+                        <span><i className="fa fa-phone" aria-hidden="true" /></span> 0372924454
                     </div>
                     <div className="footer__center-email">
-                        <span><i className="fas fa-mail-bulk" /></span> nphuocnguyen1009@gmail.com
+                        <span><i className="fas fa-envelope" /></span> thefrog.streetwear@gmail.com
                     </div>
                     </div>
                 </div>
@@ -37,14 +37,14 @@ export default function Footer() {
                         <h1>NEWSLETTER</h1>
                         <span>Get instant updates about our new products and special promos!</span>
                         <div className="footer__right-img">
-                            <img src="./image/letter-footer.png" alt="imgg" />
+                            <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302108/the-frog-main/letter-footer_sppja2.png" alt="imgg" />
                         </div>
                         <form className="footer__right-form">
                             <input type="email" placeholder="Your email address..." />
                             <button>SUBSCRIBE</button>
                         </form>
                         <div className="footer__right-payment">
-                            <img src="./image/payment.png" alt="imgg" />
+                            <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302109/the-frog-main/payment_uvfrex.png" alt="imgg" />
                         </div>
                     </div>
                 </div>

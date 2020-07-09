@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from './components/home/Home'
 import Shop from './components/shop/Shop'
+import SubCategoryShop from './components/shop/SubCategoryShop'
 
 const routes = [
     {
@@ -12,6 +13,11 @@ const routes = [
         path: '/shops',
         exact: true,
         main: () => <Shop/>
+    },
+    {
+        path: '/shops/:category',
+        exact: true,
+        main: ()=> <SubCategoryShop/>
     }
     
 ]

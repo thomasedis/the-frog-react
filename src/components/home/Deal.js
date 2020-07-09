@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 export default function Deal() {
     return (
         <div className="grid">
@@ -30,7 +30,7 @@ export default function Deal() {
                             <div className="countdown" id="countdown" />
                         </div>
                         <div className="deal__right-buynow">
-                            <span className="deal__right-buynow--text">BUY NOW <span className="deal__right-buynow--text-icon"> <i className="fas fa-hand-point-right" /></span></span>
+                            <Link to="/shops" className="deal__right-buynow--text">BUY NOW <span className="deal__right-buynow--text-icon"> <i className="fas fa-hand-point-right" /></span></Link>
                         </div>
                         <div className="deal__right-banner">
                             <img className="animate__animated animate__jello" src="./image/banner-deal.png" alt="imgg" />

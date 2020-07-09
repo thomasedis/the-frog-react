@@ -17,11 +17,12 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("countdown").innerHTML = `<span class="countdown-wrapper"><span class="text">${days}</span><span class="number">DAYS</span></span>` 
-  + `<span class="countdown-wrapper"><span class="text">${hours}</span><span class="number">HRS</span></span>`
-  +`<span class="countdown-wrapper"><span class="text">${minutes}</span><span class="number">MINS</span></span>` 
-  + `<span class="countdown-wrapper"><span class="text">${seconds}</span><span class="number">SECS</span></span>`;
-    
+  if( document.getElementById("countdown")){
+    document.getElementById("countdown").innerHTML = `<span class="countdown-wrapper"><span class="text">${days}</span><span class="number">DAYS</span></span>` 
+    + `<span class="countdown-wrapper"><span class="text">${hours}</span><span class="number">HRS</span></span>`
+    +`<span class="countdown-wrapper"><span class="text">${minutes}</span><span class="number">MINS</span></span>` 
+    + `<span class="countdown-wrapper"><span class="text">${seconds}</span><span class="number">SECS</span></span>`;
+  }
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);

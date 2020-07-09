@@ -17,7 +17,7 @@ export default function Header() {
                         <div className="header__search-sub">
                         <div className="header__search-sub--item">
                             <div className="header__search-sub--item-img">
-                            <img src="./image/bg_header.jpg" alt="imgg" />
+                            <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302108/the-frog-main/bg_header_kl1upv.jpg" alt="imgg" />
                             </div>
                             <div className="header__search-sub--item-content">
                             <span className="name">Ao Hoodie Form Rong</span>
@@ -29,8 +29,8 @@ export default function Header() {
                     </div> 
                     <div className="l-6 m-6"> 
                     <div className="header__logo">
-                        <img src="./image/frog-with-hat.png" alt="imagee" className="header__logo-imgMain" />
-                        <img src="./image/logo_border.png" alt="imagee" className="header__logo-imgBorder" />
+                        <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302107/the-frog-main/frog-with-hat_xhj4er.png" alt="imagee" className="header__logo-imgMain" />
+                        <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302108/the-frog-main/logo_border_jhvojf.png" alt="imagee" className="header__logo-imgBorder" />
                     </div>
                     </div>
                     <div className="l-3 m-3 header__cart-right">
@@ -59,7 +59,7 @@ export default function Header() {
                             </div>    
                         </div>
                         {/* <div class="header__cart-sub--empty">
-                                    <img src="./image/cart-empty.png" alt="imgg">
+                                    <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302107/the-frog-main/cart-empty_w0epv2.png" alt="imgg">
                                 </div> */}
                         </div>
                     </div>
