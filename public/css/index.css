@@ -261,10 +261,10 @@ html {
       z-index: 10; }
       .header__cart-sub::before {
         content: '';
-        height: 20px;
+        height: 30px;
         width: 50%;
         position: absolute;
-        top: -20px;
+        top: -30px;
         right: 0;
         background-color: transparent; }
       .header__cart-sub--wrap {
@@ -340,6 +340,13 @@ html {
         justify-content: center;
         align-items: center;
         height: 100%; }
+      .header__cart-sub--bottom {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 20px;
+        background-color: #999;
+        left: 0; }
     .header__cart:hover .header__cart-icon {
       color: #058301; }
     .header__cart:hover .header__cart-sub {

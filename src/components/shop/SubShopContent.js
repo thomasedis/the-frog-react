@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
+import  {notify} from 'react-notify-toast';
 import * as actions from '../../actions/shops/index'
 
 export default function ShopContent(props) {
@@ -33,6 +34,11 @@ export default function ShopContent(props) {
         if(page >1)
         setPage(page -1)
     }
+    const handleAddToCart= (item) =>{
+        notify.show('Thêm vào giỏ hàng thành công !','success',1500);
+        dispatch(actions.actAddToCart(item))
+    }
+
     let shopItem
     data ? 
     shopItem = data.map((item)=>{
@@ -44,7 +50,7 @@ export default function ShopContent(props) {
                     <div className="shop__content-item--img-overlay">
                     <div className="icon-wrapper">
                         <div className="icon-wrapper__add">
-                        <span>Add to cart <span className="icon-cart"><i className="fa fa-cart-plus" aria-hidden="true" /></span></span>
+                        <span onClick={()=> handleAddToCart(item)}>Add to cart <span className="icon-cart"><i className="fa fa-cart-plus" aria-hidden="true" /></span></span>
                         </div>
                         <div className="icon-wrapper__icon">
                         <span><i className="fa fa-search" aria-hidden="true" /></span>

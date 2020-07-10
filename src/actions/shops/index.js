@@ -17,3 +17,9 @@ export const actFetchShops = (shops)=>{
         shops
     }
 }
+export const actAddToCart = (item) =>{
+    return{
+        type: types.ADD_TO_CART,
+        item
+    }
+}

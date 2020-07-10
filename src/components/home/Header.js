@@ -1,5 +1,6 @@
 import React from 'react'
 import HeaderTop from './HeaderTop'
+import Carts from './Carts'
 
 export default function Header() {
     return (
@@ -34,35 +35,7 @@ export default function Header() {
                     </div>
                     </div>
                     <div className="l-3 m-3 header__cart-right">
-                    <div className="header__cart">
-                        <div className="header__cart-icon">
-                        <span><i className="fa fa-shopping-bag" aria-hidden="true" /></span>
-                        </div>
-                        <div className="header__cart-detail">
-                        <div className="header__cart-detail--quantity"><span>0</span> ITEMS</div>
-                        <div className="header__cart-detail--price">$ <span>100</span></div>
-                        </div>
-                        <div className="header__cart-sub">
-                        <div className="header__cart-sub--wrap">
-                            <div className="header__cart-sub--wrap--item">
-                            <div className="header__cart-sub--wrap--item__img"><img src="./image/bg_header.jpg" alt="imgg" /></div>
-                            <div className="header__cart-sub--wrap--item__detail">
-                                <div className="header__cart-sub--wrap--item__detail-left">
-                                <div className="header__cart-sub--wrap--item__detail-left--name">CROCS SHORT WALLET</div>
-                                <div className="header__cart-sub--wrap--item__detail-left--category">Hoodie</div>
-                                </div>
-                                <div className="header__cart-sub--wrap--item__detail-right">
-                                <div className="header__cart-sub--wrap--item__detail-right--price">$ 120</div>
-                                <div className="header__cart-sub--wrap--item__detail-right--del">X</div>
-                                </div>
-                            </div>
-                            </div>    
-                        </div>
-                        {/* <div class="header__cart-sub--empty">
-                                    <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302107/the-frog-main/cart-empty_w0epv2.png" alt="imgg">
-                                </div> */}
-                        </div>
-                    </div>
+                        <Carts/>
                     </div>
                 </div>
                 </div>

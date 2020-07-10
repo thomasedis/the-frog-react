@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react'
 import * as actions from '../../actions/shops/index'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-
+import Pagination from './Pagination'
+import  {notify} from 'react-notify-toast';
 export default function ShopContent() {
 
     const dispatch = useDispatch()
@@ -15,9 +16,13 @@ export default function ShopContent() {
             page,
             limit,
         }
-        dispatch(actions.actFetchShopsRequest(params))
+       
+        dispatch(actions.actFetchShopsRequest(params.page ===1 ? '' : params))
          // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [page, limit])
+
+   
+
     const handleNext = ()=>{
         setPage(page +1)
     }
@@ -25,9 +30,17 @@ export default function ShopContent() {
         if(page >1)
         setPage(page -1)
     }
+    const handleAddToCart = (item)=>{
+        notify.show('Thêm vào giỏ hàng thành công !','success',1500);
+        dispatch(actions.actAddToCart(item))
+    }
+
+
+    let dataTemp =data
+    // data.length <=9 ? dataTemp = data : dataTemp = data.splice(1,9)
     let shopItem
     data ? 
-    shopItem = data.map((item)=>{
+    shopItem = dataTemp.map((item)=>{
         return(
             <div className="l-4 m-4 content-item-padding" key={item._id}>
                 <div className="shop__content-item">
@@ -36,7 +49,7 @@ export default function ShopContent() {
                     <div className="shop__content-item--img-overlay">
                     <div className="icon-wrapper">
                         <div className="icon-wrapper__add">
-                        <span>Add to cart <span className="icon-cart"><i className="fa fa-cart-plus" aria-hidden="true" /></span></span>
+                        <span onClick={()=>handleAddToCart(item)}>Add to cart <span className="icon-cart"><i className="fa fa-cart-plus" aria-hidden="true" /></span></span>
                         </div>
                         <div className="icon-wrapper__icon">
                         <span><i className="fa fa-search" aria-hidden="true" /></span>
@@ -79,17 +92,7 @@ export default function ShopContent() {
             <div className="row no-gutters shop__contentBackground">
                 {shopItem}
             </div>
-            <div className="shop__content-pagination">
-            <div className="shop__content-pagination--wrap">
-                <ul>
-                <li onClick={handlePre}><span><i className="fa fa-chevron-left" aria-hidden="true" /></span></li>
-                <li className="shop__content-pagination--active"><a href="/s">1</a></li>
-                <li><a href="/s">2</a></li>
-                <li><a href="/s">3</a></li>
-                <li onClick={handleNext}><span><i className="fa fa-chevron-right" aria-hidden="true" /></span></li>
-                </ul>
-            </div>
-            </div>
+            <Pagination handlePre={handlePre} handleNext={handleNext} />
         </div>
                 
     )
