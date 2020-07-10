@@ -1,7 +1,7 @@
 import React from 'react'
 import HeaderTop from './HeaderTop'
 import Carts from './Carts'
-
+import {Link} from 'react-router-dom'
 export default function Header() {
     return (
         <>
@@ -29,10 +29,12 @@ export default function Header() {
                     </div>
                     </div> 
                     <div className="l-6 m-6"> 
-                    <div className="header__logo">
-                        <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302107/the-frog-main/frog-with-hat_xhj4er.png" alt="imagee" className="header__logo-imgMain" />
-                        <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302108/the-frog-main/logo_border_jhvojf.png" alt="imagee" className="header__logo-imgBorder" />
-                    </div>
+                 
+                        <div className="header__logo">       
+                            <Link to="/"><img src="https://res.cloudinary.com/the-frog/image/upload/v1594302107/the-frog-main/frog-with-hat_xhj4er.png" alt="imagee" className="header__logo-imgMain" /></Link> 
+                            <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302108/the-frog-main/logo_border_jhvojf.png" alt="imagee" className="header__logo-imgBorder" />
+                        </div>
+            
                     </div>
                     <div className="l-3 m-3 header__cart-right">
                         <Carts/>

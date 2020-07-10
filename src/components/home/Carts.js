@@ -1,5 +1,7 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import {useSelector} from 'react-redux'
+import {Link} from 'react-router-dom'
+
 export default function Carts() {
     const data = useSelector(state => state.carts)
     
@@ -35,7 +37,7 @@ export default function Carts() {
     return (
         <div className="header__cart">
             <div className="header__cart-icon">
-                <span><i className="fa fa-shopping-bag" aria-hidden="true" /></span>
+               <Link to="/carts"><span><i className="fa fa-shopping-bag" aria-hidden="true" /></span></Link> 
             </div>
             <div className="header__cart-detail">
                 <div className="header__cart-detail--quantity"><span>{data.length}</span> ITEMS</div>
@@ -43,7 +45,7 @@ export default function Carts() {
             </div>
             <div className="header__cart-sub">
                 {
-                    data ? <div className="header__cart-sub--wrap">
+                    data.length !== 0 ? <div className="header__cart-sub--wrap">
                             {cartItem}   
                             </div>
                         : 
@@ -52,7 +54,10 @@ export default function Carts() {
                         </div>
                 }
                     <div className="header__cart-sub--bottom">
-                        XEM GIO HANG
+                        <Link to="/carts">
+                            <span>XEM GIO HANG</span>
+                        </Link>
+                        
                     </div>
             </div>
             
