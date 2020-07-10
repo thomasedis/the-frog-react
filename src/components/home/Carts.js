@@ -1,10 +1,11 @@
 import React from 'react'
-import {useSelector} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
 import {Link} from 'react-router-dom'
-
+import {notify} from 'react-notify-toast'
+import * as actions from '../../actions/shops/index'
 export default function Carts() {
     const data = useSelector(state => state.carts)
-    
+    const dispatch = useDispatch()
     const totalPrice = (data)=>{
         console.log(data)
         let total = 0
@@ -15,7 +16,13 @@ export default function Carts() {
         }
         return total
     }
-
+    function deleteCart(cart){
+        if(confirm('Are you sure delete cart ?')){ //eslint-disable-line
+            notify.show('Đã xóa sản phẩm khỏi giỏ hàng !','error',1500);
+            dispatch(actions.actDeleteCart(cart))
+        }
+    
+    }
     const cartItem = data.map((item)=>{
         return (
             <div className="header__cart-sub--wrap--item" key={item._id}>
@@ -27,7 +34,7 @@ export default function Carts() {
                     </div>
                     <div className="header__cart-sub--wrap--item__detail-right">
                     <div className="header__cart-sub--wrap--item__detail-right--price">$ {item.newPrice}</div>
-                    <div className="header__cart-sub--wrap--item__detail-right--del">X</div>
+                    <div onClick={()=> deleteCart(item)} className="header__cart-sub--wrap--item__detail-right--del">X</div>
                     </div>
                 </div>
             </div>   

@@ -23,3 +23,16 @@ export const actAddToCart = (item) =>{
         item
     }
 }
+export const actUpdateQuantityCart = (cart, quantity)=>{
+    return{
+        type: types.UPDATE_QUANTITY_TO_CART,
+        cart,
+        quantity
+    }
+}
+export const actDeleteCart = (cart)=>{
+    return{
+        type: types.REMOVE_TO_CART,
+        cart
+    }
+}

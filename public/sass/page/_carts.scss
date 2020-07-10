@@ -1,0 +1,212 @@
+.carts-wrapper{
+    background-color: $color-primary;
+    // padding-top:200px;
+    position: relative;
+    @include mobie{
+        padding-top: 120px;
+    }
+}
+.cartsMain{
+    color: $text-color;
+    text-align: center;
+    &__title{
+        padding: 30px;
+        font-size: 3rem;
+        font-weight: bold;
+        color: $color-secondary-light;
+        @include mobie{
+            padding: 25px;
+            font-size: 2rem;
+        }
+    }
+    &__content{
+        &-item{
+            border-bottom: 1px solid #999;
+        }
+        table{
+            width: 100%;
+        }
+        &-top{
+            width: 100%;
+            text-align: center;
+            padding: 40px;
+            background-color: #282828;
+            font-size: 1.3em;
+            color: $color-secondary-light;
+            th{
+                padding: 10px;
+                // border: 1px solid;
+                // border-color: transparent #999 transparent #999;
+            }
+            
+            @include mobie{
+                font-size: 1rem;
+            }
+        }
+        &-products{
+            display: flex;
+            align-items: center;
+            img{
+                padding: 5px 10px 5px 0;
+                height: 150px;
+                @include mobie{
+                    padding: 5px 5px 5px 0;
+                    height: 80px;
+                }
+            }
+            &-sub{
+                padding: 0 10px;
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                span{
+                    font-size: 1.4rem;
+                    color: #999;
+                    @include mobie{
+                        font-size: 0.8rem;
+                    }
+                }
+                @include mobie {
+                    padding: 0;
+                }
+                h2{
+                    text-transform: uppercase;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    overflow: hidden;
+                    @include mobie{
+                        font-size: 1rem;
+                    }
+                }
+                span{
+                    text-transform: uppercase;
+                }
+                td{
+                    font-size: 1rem;
+                }
+
+            }
+            &-quantity{
+                button{
+                    background: transparent;
+                    outline: none;
+                    border: none;
+                }
+                span{
+                    display: inline-block;
+                    padding: 0 10px;
+                    font-size: 1.6rem;
+                    @include mobie{
+                        font-size: 1rem;
+                        padding: 0 2px;
+                    }
+                }
+                .control{
+                    cursor: pointer;
+                    padding: 0 10px;
+                    color: $text-color;
+                    border-radius: 5px;
+                    background-color: $color-secondary-light;
+                    &:hover{
+                        background-color: $color-secondary;
+                    }
+                    @include mobie{
+                        padding: 0 4px;
+                    }
+                }
+                @include mobie {
+                    button{
+                        border: none;
+                        background-color: transparent;
+                    }
+                }
+            }
+            &-remove{  
+                button{
+                    background: transparent;
+                    outline: none;
+                    border: none;
+                }
+                span{
+                    padding: 5px 10px;
+                    background-color: $color-secondary-light;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    color:$text-color;
+                    font-weight: bold;
+                    &:hover{
+                        background-color: $color-secondary;
+                    }
+                    @include mobie{
+                        font-size: 1rem;
+                        padding: 3px 6px;
+                    }   
+                } 
+                @include mobie {
+                    button{
+                        border: none;
+                        background-color: transparent;
+                    }
+                }                     
+            }
+            &-price{
+                @include mobie{
+                    font-size: 1rem;
+                }
+                
+            }
+            &-total{
+                @include mobie{
+                    font-size: 1rem;
+                }
+            }
+           
+        }
+    }
+    &__bottom{
+       
+       
+        padding: 20px 0;
+        background-color: $color-primary;
+        text-align: left;
+        &-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &--total{
+                display: block;
+                padding: 10px;
+                font-size: 1.8rem;
+                font-weight: bold;
+                @include mobie{
+                    font-size: 1.6rem;
+                }
+            }
+            &--redirect{
+                display: block;
+                padding: 10px;
+                width: 200px;
+                text-align: center;
+                background-color: $color-secondary-light;
+                color: $text-color;
+                font-weight: bold;
+                border-radius: 5px;
+                cursor: pointer;
+                &:hover{
+                    background-color: $color-secondary;
+                }
+                @include mobie{
+                    font-size: 1.5rem;
+                    padding: 5px;
+                }
+            }
+        }
+        @include mobie{
+            padding: 10px 0;
+        }
+    }
+  
+}
+

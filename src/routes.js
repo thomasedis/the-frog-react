@@ -2,7 +2,7 @@ import React from 'react'
 import Home from './components/home/Home'
 import Shop from './components/shop/Shop'
 import SubCategoryShop from './components/shop/SubCategoryShop'
-
+import Carts from './components/carts/Carts'
 const routes = [
     {
         path: '/',
@@ -18,6 +18,11 @@ const routes = [
         path: '/shops/:category',
         exact: true,
         main: ()=> <SubCategoryShop/>
+    },
+    {
+        path: '/carts',
+        exact: true,
+        main: ()=> <Carts/>
     }
     
 ]
