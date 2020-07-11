@@ -5,6 +5,7 @@ export const actFetchShopsRequest = (params)=>{
     return(dispatch) =>{
             axiosClient.get("/shops", { params })
             .then(res => {
+               
                 dispatch(actFetchShops(res.data))
             })
             .catch(err => console.log(err))

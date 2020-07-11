@@ -7,7 +7,7 @@ export default function Carts() {
     const data = useSelector(state => state.carts)
     const dispatch = useDispatch()
     const totalPrice = (data)=>{
-        console.log(data)
+       
         let total = 0
         if(data){
              for(var i=0; i< data.length; i++){

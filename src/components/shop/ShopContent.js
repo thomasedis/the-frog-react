@@ -4,8 +4,11 @@ import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import Pagination from './Pagination'
 import  {notify} from 'react-notify-toast';
-export default function ShopContent() {
+import {Link} from 'react-router-dom'
 
+
+export default function ShopContent() {
+    const [value, setValue] = useState(0)
     const dispatch = useDispatch()
     // const [data, setData] = useState([])
     const [page, setPage] = useState(1)
@@ -34,9 +37,29 @@ export default function ShopContent() {
         notify.show('Thêm vào giỏ hàng thành công !','success',1500);
         dispatch(actions.actAddToCart(item))
     }
+    let dataTemp = [...data]
+    const handleSort = (e)=>{
+        setValue(parseInt(e.target.value))
+    }
+    if(value ===0){
+        dataTemp = [...data]
+        
+    }
+        
+    if(value === 1){
+        dataTemp = [...data]
+        dataTemp = dataTemp.sort((a,b)=>{
+            return a.newPrice - b.newPrice
+        })
+    }
+    if(value === 2){
+        dataTemp = [...data]
+        dataTemp = dataTemp.sort((a,b)=>{
+            return b.newPrice - a.newPrice
+        })   
+    } 
 
-
-    let dataTemp =data
+    
     // data.length <=9 ? dataTemp = data : dataTemp = data.splice(1,9)
     let shopItem
     data ? 
@@ -46,25 +69,27 @@ export default function ShopContent() {
                 <div className="shop__content-item">
                 <div className="shop__content-item--img">
                     <img src={item.image} alt="imgg" />
-                    <div className="shop__content-item--img-overlay">
-                    <div className="icon-wrapper">
-                        <div className="icon-wrapper__add">
-                        <span onClick={()=>handleAddToCart(item)}>Add to cart <span className="icon-cart"><i className="fa fa-cart-plus" aria-hidden="true" /></span></span>
+                   
+                        <div className="shop__content-item--img-overlay">
+                            <div className="icon-wrapper">
+                                <div className="icon-wrapper__add">
+                                <span onClick={()=>handleAddToCart(item)}>Add to cart <span className="icon-cart"><i className="fa fa-cart-plus" aria-hidden="true" /></span></span>
+                                </div>
+                                <div className="icon-wrapper__icon">
+                                <Link to={`/${item._id}`}><span><i className="fa fa-search" aria-hidden="true" /></span></Link>
+                                <span><i className="far fa-heart" /></span>
+                                </div>
+                            </div>
                         </div>
-                        <div className="icon-wrapper__icon">
-                        <span><i className="fa fa-search" aria-hidden="true" /></span>
-                        <span><i className="far fa-heart" /></span>
-                        </div>
-                    </div>
-                    </div>
+               
                 </div>
                 <div className="shop__content-item--sub">
                     <div className="name">
-                    <h2>{item.name}</h2>
+                        <Link to={`/${item._id}`}><h2>{item.name}</h2></Link> 
                     </div>
                     <div className="price">
-                    <span className="old">$ {item.oldPrice}</span>
-                    <span className="new">$ {item.newPrice}</span>
+                        <span className="old">$ {item.oldPrice}</span>
+                        <span className="new">$ {item.newPrice}</span>
                     </div>
                 </div>
                 </div>
@@ -79,14 +104,15 @@ export default function ShopContent() {
         <div className="shop__content">
             <div className="shop__content-sort">
                 <div className="shop__content-sort--select">
-                    <select name="sortValue">
-                    <option id="shop__content-sort--select-option" value="{0}">Default sorting</option>
-                    <option value="{1}">Price: low to high</option>
-                    <option value="{2}">Price: high to low</option>
-                    </select>
+                <select name="sortValue"
+                        onChange={handleSort} >
+                    <option id="shop__content-sort--select-option" value={0}>Default sorting</option>
+                    <option value={1}>Price: low to high</option>
+                    <option value={2}>Price: high to low</option>
+                </select>
                 </div>
-                <div className="shop__content-sort--icon">
-                    <span><i className="fa fa-th-list" aria-hidden="true" /></span>
+            <div className="shop__content-sort--icon">
+                <span><i className="fa fa-th-list" aria-hidden="true" /></span>
             </div>
             </div>
             <div className="row no-gutters shop__contentBackground">

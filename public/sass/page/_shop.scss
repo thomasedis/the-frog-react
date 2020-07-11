@@ -331,9 +331,9 @@
                             display: flex;
                             justify-content: space-around;
                             padding: 0 5px;
-                            span{
+                            a{
                                 padding: 0 5px;
-                               
+                                color: $text-color;
                                 cursor: pointer;
                                 &:hover{
                                     color: $color-secondary-light;
@@ -363,9 +363,14 @@
                     overflow: hidden;
                     text-transform: uppercase;
                     font-size: 1.2rem;
-                    &:hover{
-                        color: $color-secondary-light;
+                    a{
+                        color: $text-color;
+                        text-decoration: none;
+                        &:hover{
+                            color: $color-secondary-light;
+                        }
                     }
+                    
                 }
                 .price{
                     span{
@@ -421,4 +426,136 @@
         }
     }
    
+}
+
+.detailProduct-wrapper{
+    background-image: url('../../image/bg_banner.png');
+    padding: 50px 0;
+    background-color: rgba(0,0,0,0.7);
+}
+.detailProduct{
+    display: flex;
+    align-items: center;
+    &__image{
+        flex: 6;
+        display: flex;
+        justify-content: center;
+        img{
+            border-radius: 10px;
+        }
+    }
+    &__content{
+        flex: 4;
+        &-sub{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1{
+                text-transform: uppercase;
+                font-size: 3rem;
+                text-align: center;
+            }
+            .category{
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                color: rgb(187, 187, 187);
+            }
+            .price{
+                span{
+                    padding: 0 5px;
+                    font-size: 1.6rem;
+                }
+                .oldPrice{
+                    color: #999;
+                    text-decoration: line-through;
+                }
+                .newPrice{
+                    color:white;
+                    font-weight: bold;
+                }
+            }
+        }
+        &-size{
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            select{
+                width: 80%;
+                cursor: pointer;
+                padding: 10px;
+                outline: none;
+                border: none;
+                background: $color-primary-light;
+                color: $text-color;
+                border-radius: 5px;
+            }
+        }
+        &-color{
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            select{
+                width: 80%;
+                cursor: pointer;
+                padding: 10px;
+                outline: none;
+                border: none;
+                background: $color-primary-light;
+                color: $text-color;
+                border-radius: 5px;
+            }
+        }
+        &-checkout{
+            
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            padding: 10px;
+            outline: none;
+            border: none;
+            background: $color-primary-light;
+            color: $text-color;
+            border-radius: 5px;
+            margin: 0 auto;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: 0.2s all;
+            border: 1px solid #999;
+            &:hover{
+                background-color: $color-primary;
+                border: 1px solid #999;
+                color: $color-secondary-light;
+            }
+        }
+        &-buynow{
+            
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            padding: 10px;
+            outline: none;
+            border: none;
+            background: $color-primary-dark;
+            color: $text-color;
+            border-radius: 5px;
+            margin: 0 auto;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: 0.2s all;
+            border: 1px solid #999;
+            &:hover{
+                background-color: $color-primary;
+                border: 1px solid #999;
+                color: $color-secondary-light;
+            }
+        }
+        &-description{
+            width: 80%;
+           margin: 0 auto;
+           margin-top: 20px;
+
+        }
+    }
 }

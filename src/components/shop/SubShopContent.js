@@ -2,10 +2,12 @@ import React, {useState, useEffect} from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import  {notify} from 'react-notify-toast';
+import {Link} from 'react-router-dom'
 import * as actions from '../../actions/shops/index'
 
+
 export default function ShopContent(props) {
-   
+    const [value, setValue] = useState(0)
     const [page, setPage] = useState(1)
     const [category, setCagegory] = useState("all")
     const [limit] = useState(6)
@@ -39,9 +41,30 @@ export default function ShopContent(props) {
         dispatch(actions.actAddToCart(item))
     }
 
+    let dataTemp = [...data]
+    const handleSort = (e)=>{
+        setValue(parseInt(e.target.value))
+    }
+    if(value ===0){
+        dataTemp = [...data]
+        
+    }
+        
+    if(value === 1){
+        dataTemp = [...data]
+        dataTemp = dataTemp.sort((a,b)=>{
+            return a.newPrice - b.newPrice
+        })
+    }
+    if(value === 2){
+        dataTemp = [...data]
+        dataTemp = dataTemp.sort((a,b)=>{
+            return b.newPrice - a.newPrice
+        })   
+    } 
     let shopItem
-    data ? 
-    shopItem = data.map((item)=>{
+    dataTemp ? 
+    shopItem = dataTemp.map((item)=>{
         return(
             <div className="l-4 m-4 content-item-padding" key={item._id}>
                 <div className="shop__content-item">
@@ -53,7 +76,7 @@ export default function ShopContent(props) {
                         <span onClick={()=> handleAddToCart(item)}>Add to cart <span className="icon-cart"><i className="fa fa-cart-plus" aria-hidden="true" /></span></span>
                         </div>
                         <div className="icon-wrapper__icon">
-                        <span><i className="fa fa-search" aria-hidden="true" /></span>
+                        <Link to={`/${item._id}`}><span><i className="fa fa-search" aria-hidden="true" /></span></Link>
                         <span><i className="far fa-heart" /></span>
                         </div>
                     </div>
@@ -61,7 +84,7 @@ export default function ShopContent(props) {
                 </div>
                 <div className="shop__content-item--sub">
                     <div className="name">
-                    <h2>{item.name}</h2>
+                    <Link to={`/${item._id}`}><h2>{item.name}</h2></Link>
                     </div>
                     <div className="price">
                     <span className="old">$ {item.oldPrice}</span>
@@ -82,11 +105,12 @@ export default function ShopContent(props) {
         <div className="shop__content">
             <div className="shop__content-sort">
                 <div className="shop__content-sort--select">
-                    <select name="sortValue">
-                    <option id="shop__content-sort--select-option" value="{0}">Default sorting</option>
-                    <option value="{1}">Price: low to high</option>
-                    <option value="{2}">Price: high to low</option>
-                    </select>
+                <select name="sortValue"
+                        onChange={handleSort} >
+                    <option id="shop__content-sort--select-option" value={0}>Default sorting</option>
+                    <option value={1}>Price: low to high</option>
+                    <option value={2}>Price: high to low</option>
+                </select>
                 </div>
                 <div className="shop__content-sort--icon">
                     <span><i className="fa fa-th-list" aria-hidden="true" /></span>
