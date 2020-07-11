@@ -62,7 +62,7 @@ export default function ShopContent() {
     
     // data.length <=9 ? dataTemp = data : dataTemp = data.splice(1,9)
     let shopItem
-    data ? 
+    data.length ? 
     shopItem = dataTemp.map((item)=>{
         return(
             <div className="l-4 m-4 content-item-padding" key={item._id}>
@@ -98,7 +98,11 @@ export default function ShopContent() {
     })
     :
     shopItem = (
-        <h1>Loadingg</h1>
+        <>
+            <div className="loading-shop">
+                <img src="https://res.cloudinary.com/the-frog/image/upload/v1594452127/shop-top/13f94b50bd090b8f88811959cdb96cfb_z1zds1.gif" alt="imgg"></img>
+            </div>
+        </>
     )
     return (
         <div className="shop__content">

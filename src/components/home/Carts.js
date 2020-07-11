@@ -29,7 +29,7 @@ export default function Carts() {
                 <div className="header__cart-sub--wrap--item__img"><img src={item.image} alt="imgg" /></div>
                 <div className="header__cart-sub--wrap--item__detail">
                     <div className="header__cart-sub--wrap--item__detail-left">
-                    <div className="header__cart-sub--wrap--item__detail-left--name">{item.name}</div>
+                    <div className="header__cart-sub--wrap--item__detail-left--name"><Link to={`/${item._id}`}>{item.name}</Link></div>
                     <div className="header__cart-sub--wrap--item__detail-left--category">{item.category[0]}</div>
                     </div>
                     <div className="header__cart-sub--wrap--item__detail-right">

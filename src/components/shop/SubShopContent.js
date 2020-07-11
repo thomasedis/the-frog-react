@@ -62,8 +62,9 @@ export default function ShopContent(props) {
             return b.newPrice - a.newPrice
         })   
     } 
+   
     let shopItem
-    dataTemp ? 
+    data.length !== 0 ? 
     shopItem = dataTemp.map((item)=>{
         return(
             <div className="l-4 m-4 content-item-padding" key={item._id}>
@@ -98,7 +99,9 @@ export default function ShopContent(props) {
     :
     shopItem = (
         <>
-        <h1>Loadingg</h1>
+        <div className="loading-shop">
+            <img src="https://res.cloudinary.com/the-frog/image/upload/v1594452127/shop-top/13f94b50bd090b8f88811959cdb96cfb_z1zds1.gif" alt="imgg"></img>
+        </div>
         </>
     )
     return (

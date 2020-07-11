@@ -3,8 +3,10 @@ import {useParams, useLocation} from 'react-router-dom'
 import * as actions from '../../actions/shops/index'
 import {useDispatch, useSelector} from 'react-redux'
 import  {notify} from 'react-notify-toast';
+import "react-image-gallery/styles/css/image-gallery.css";
+import ImageGallery from 'react-image-gallery';
 export default function DetailProduct() {
-    
+  
     const {id} = useParams()
     const {pathname} = useLocation();
     const dispatch = useDispatch()
@@ -22,18 +24,35 @@ export default function DetailProduct() {
         }
         dispatch(actions.actFetchShopsRequest(params ? params : ''))
         //eslint-disable-next-line
-    },[])
+    },[id])
    
     const handleAddToCart = (item)=>{
         notify.show('Thêm vào giỏ hàng thành công !','success',1500);
         dispatch(actions.actAddToCart(item))
     }
+    const images = [
+        {
+          original: `${dataDetail[0].image}`,
+          thumbnail: `${dataDetail[0].image}`,
+        },
+        {
+            original: `${dataDetail[0].image}`,
+            thumbnail: `${dataDetail[0].image}`,
+        },
+        {
+        original: `${dataDetail[0].image}`,
+        thumbnail: `${dataDetail[0].image}`,
+        },
+      ];
     return (
        <div className="grid detailProduct-wrapper">
             <div className="grid wide">
                 <div className="detailProduct">
                     <div className="detailProduct__image">
-                        <img src={dataDetail[0].image} alt="imgg"/>
+                        
+                      {/* <img src={dataDetail[0].image} alt="imgg"/> */}
+                      <ImageGallery items={images} showFullscreenButton={false} showPlayButton={false}/>
+                     
                     </div>
                     <div className="detailProduct__content">
                         <div className="detailProduct__content-sub">
@@ -67,7 +86,7 @@ export default function DetailProduct() {
                             <span>MUA NGAY</span>
                         </div>
                         <div className="detailProduct__content-description">
-                            <h3>Chi tiet san pham</h3>
+                            <h3>CHI TIẾT SẢN PHẨM</h3>
                             <ul>
                                 <li>Sản phẩm 100% cotton</li>
                                 <li>Form áo cơ bản </li>

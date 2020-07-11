@@ -232,6 +232,13 @@
                             padding: 0 10px;
                             transition: 0.2s all;
                             &--name{
+                                a{
+                                    color: $text-color;
+                                    text-decoration: none;
+                                    &:hover{
+                                        color: $color-secondary-light;
+                                    }
+                                }
                                 text-transform: uppercase;
                                 display: -webkit-box;
                                 -webkit-box-orient: vertical;
@@ -243,9 +250,7 @@
                                 text-transform: uppercase;
                                 font-size: 1.3rem;
                             }
-                            &:hover{
-                                color: $color-secondary-light;
-                            }
+                            
                         }
                         &-right{
                             display: flex;
