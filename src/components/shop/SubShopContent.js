@@ -4,71 +4,78 @@ import { useDispatch } from 'react-redux'
 import  {notify} from 'react-notify-toast';
 import {Link} from 'react-router-dom'
 import * as actions from '../../actions/shops/index'
-
+import aos from 'aos'
+import 'aos/dist/aos.css'
+import 'aos/dist/aos.js'
 
 export default function ShopContent(props) {
+    aos.init({
+        // initialise with other settings
+        duration : 1000
+      });
     const [value, setValue] = useState(0)
-    const [page, setPage] = useState(1)
-    const [category, setCagegory] = useState("all")
-    const [limit] = useState(6)
+    // const [page, setPage] = useState(1)
+    // const [category, setCagegory] = useState("all")
+    // const [limit] = useState(6)
     const {categories} = props
     const dispatch = useDispatch()
     const data = useSelector(state => state.shops)
-    useEffect(() =>{
-        if(categories){
-            setCagegory(categories)
-        }
-    },[categories])
+    // useEffect(() =>{
+    //     if(categories){
+    //         setCagegory(categories)
+    //     }
+    // },[categories])
     
     useEffect(() => {
-        let params = {
-            page,
-            limit,
-            category
-        }
-       dispatch(actions.actFetchShopsRequest(params))
+     
+       dispatch(actions.actFetchShopsRequest())
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [page, limit, category])
-    const handleNext = ()=>{
-        setPage(page +1)
-    }
-    const handlePre = ()=>{
-        if(page >1)
-        setPage(page -1)
-    }
+    }, [])
+    // const handleNext = ()=>{
+    //     setPage(page +1)
+    // }
+    // const handlePre = ()=>{
+    //     if(page >1)
+    //     setPage(page -1)
+    // }
     const handleAddToCart= (item) =>{
         notify.show('Thêm vào giỏ hàng thành công !','success',1500);
         dispatch(actions.actAddToCart(item))
     }
-
-    let dataTemp = [...data]
+    let dataMain = data.filter((data)=>{
+        return data.category[0] === categories
+    })
+  
+    let dataTemp = [...dataMain]
     const handleSort = (e)=>{
         setValue(parseInt(e.target.value))
     }
     if(value ===0){
-        dataTemp = [...data]
+        dataTemp = [...dataMain]
         
     }
         
     if(value === 1){
-        dataTemp = [...data]
+        dataTemp = [...dataMain]
         dataTemp = dataTemp.sort((a,b)=>{
             return a.newPrice - b.newPrice
         })
     }
     if(value === 2){
-        dataTemp = [...data]
+        dataTemp = [...dataMain]
         dataTemp = dataTemp.sort((a,b)=>{
             return b.newPrice - a.newPrice
         })   
     } 
    
+    
     let shopItem
-    data.length !== 0 ? 
+    dataMain.length !== 0 ? 
+
     shopItem = dataTemp.map((item)=>{
         return(
             <div className="l-4 m-4 content-item-padding" key={item._id}>
-                <div className="shop__content-item">
+                <div className="shop__content-item" data-aos="fade-up" >
                 <div className="shop__content-item--img">
                     <img src={item.image} alt="imgg" />
                     <div className="shop__content-item--img-overlay">
@@ -100,7 +107,7 @@ export default function ShopContent(props) {
     shopItem = (
         <>
         <div className="loading-shop">
-            <img src="https://res.cloudinary.com/the-frog/image/upload/v1594452127/shop-top/13f94b50bd090b8f88811959cdb96cfb_z1zds1.gif" alt="imgg"></img>
+            <h1>COMING SOON</h1>
         </div>
         </>
     )
@@ -122,7 +129,7 @@ export default function ShopContent(props) {
             <div className="row no-gutters shop__contentBackground">
                 {shopItem}
             </div>
-            <div className="shop__content-pagination">
+            {/* <div className="shop__content-pagination">
             <div className="shop__content-pagination--wrap">
                 <ul>
                 <li onClick={handlePre}><span><i className="fa fa-chevron-left" aria-hidden="true" /></span></li>
@@ -132,7 +139,7 @@ export default function ShopContent(props) {
                 <li onClick={handleNext}><span><i className="fa fa-chevron-right" aria-hidden="true" /></span></li>
                 </ul>
             </div>
-            </div>
+            </div> */}
         </div>
                 
     )

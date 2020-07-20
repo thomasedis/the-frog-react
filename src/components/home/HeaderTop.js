@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 export default function HeaderTop() {
     return (
         <div className="grid">
@@ -20,7 +20,7 @@ export default function HeaderTop() {
                     </div>
                     <div className="l-6 m-6 c-6 headerTop__right">
                         <div>
-                        <span className="icon"><i className="fa fa-user" aria-hidden="true" /></span> <span className="item">LOGIN</span> / <span className="item">REGISTER</span> 
+                        <span className="icon"><i className="fa fa-user" aria-hidden="true" /></span> <Link to="/login" className="item">LOGIN</Link> / <Link to="register" className="item">REGISTER</Link> 
                         </div>
                     </div>
                 </div>

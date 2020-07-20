@@ -2,37 +2,38 @@ import React, {useState, useEffect} from 'react'
 import * as actions from '../../actions/shops/index'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import Pagination from './Pagination'
+// import Pagination from './Pagination'
 import  {notify} from 'react-notify-toast';
 import {Link} from 'react-router-dom'
-
+import aos from 'aos'
+import 'aos/dist/aos.css'
+import 'aos/dist/aos.js'
 
 export default function ShopContent() {
+    aos.init({
+        // initialise with other settings
+        duration : 1000
+      });
     const [value, setValue] = useState(0)
     const dispatch = useDispatch()
     // const [data, setData] = useState([])
-    const [page, setPage] = useState(1)
-    const [limit] = useState(9)
+    // const [page, setPage] = useState(1)
+    // const [limit] = useState(9)
     const data = useSelector(state => state.shops)
     useEffect(() => {
-        let params = {
-            page,
-            limit,
-        }
-       
-        dispatch(actions.actFetchShopsRequest(params.page ===1 ? '' : params))
+        dispatch(actions.actFetchShopsRequest())
          // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [page, limit])
+    }, [])
 
    
 
-    const handleNext = ()=>{
-        setPage(page +1)
-    }
-    const handlePre = ()=>{
-        if(page >1)
-        setPage(page -1)
-    }
+    // const handleNext = ()=>{
+    //     setPage(page +1)
+    // }
+    // const handlePre = ()=>{
+    //     if(page >1)
+    //     setPage(page -1)
+    // }
     const handleAddToCart = (item)=>{
         notify.show('Thêm vào giỏ hàng thành công !','success',1500);
         dispatch(actions.actAddToCart(item))
@@ -66,7 +67,7 @@ export default function ShopContent() {
     shopItem = dataTemp.map((item)=>{
         return(
             <div className="l-4 m-4 content-item-padding" key={item._id}>
-                <div className="shop__content-item">
+                <div className="shop__content-item" data-aos="fade-up" >
                 <div className="shop__content-item--img">
                     <img src={item.image} alt="imgg" />
                    
@@ -122,7 +123,7 @@ export default function ShopContent() {
             <div className="row no-gutters shop__contentBackground">
                 {shopItem}
             </div>
-            <Pagination handlePre={handlePre} handleNext={handleNext} />
+            {/* <Pagination handlePre={handlePre} handleNext={handleNext} /> */}
         </div>
                 
     )

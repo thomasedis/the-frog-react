@@ -63,8 +63,8 @@ export default function Menu() {
                         </li>
                         <MenuLink label='HOME' to='/' activeOnlyWhenExact={true} />
                         <MenuLink label='SHOP' to='/shops' activeOnlyWhenExact={false} />
-                        <MenuLink label='BLOG' to='/s' activeOnlyWhenExact={true} />
-                        <MenuLink label='ABOUTE US' to='/s' activeOnlyWhenExact={true} />
+                        <MenuLink label='BLOG' to='/blogs' activeOnlyWhenExact={true} />
+                        <MenuLink label='ABOUTE US' to='/aboute' activeOnlyWhenExact={true} />
                        
                     </ul>
                     </div>

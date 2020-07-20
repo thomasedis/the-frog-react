@@ -64,6 +64,9 @@
     display: flex;
     padding: 10px 0;
     justify-content: center;
+    &__fanPage{
+        margin-top: 20px;
+    }
     &__category{
         padding-bottom: 20px;
         
@@ -572,4 +575,7 @@
     margin: 0 auto;
     border-radius: 50%;
     overflow: hidden;
+    h1{
+        padding: 20px;
+    }
 }
