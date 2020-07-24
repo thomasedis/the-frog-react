@@ -17,7 +17,7 @@ export default function Login() {
                                 
                                 <div className="login__left-content--create">
                                     <span>Do not have an account?</span>
-                                    <Link to="/register">Create a new account</Link>
+                                    <Link to="/account/register">Create a new account</Link>
                                 </div>
                             </div>
                         </div>

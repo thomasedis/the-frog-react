@@ -1146,9 +1146,9 @@ html {
   padding: 10px 0;
   justify-content: center; }
   .shop__fanPage {
-    margin-top: 20px; }
+    width: 100%;
+    margin-top: 50px; }
   .shop__category {
-    padding-bottom: 20px;
     border-radius: 5px;
     background-image: url("../../image/bg_banner.png");
     background-size: contain; }

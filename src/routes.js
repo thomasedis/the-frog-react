@@ -38,7 +38,7 @@ const routes = [
         main: ()=> <Login/>
     },
     {
-        path: '/register',
+        path: '/account/register',
         exact: true,
         main: ()=> <Register/>
     },

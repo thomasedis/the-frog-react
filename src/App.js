@@ -6,13 +6,12 @@ import routes from './routes';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  useLocation
+  Route
 } from "react-router-dom";
 import FooterBanner from './components/home/FooterBanner';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 function App() {
-  const {pathname} = useLocation();
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   });
