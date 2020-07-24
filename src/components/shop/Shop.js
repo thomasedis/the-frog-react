@@ -6,6 +6,7 @@ export default function Shop() {
     
     return (
         <div className="grid">
+       
             <ShopTop/>
             <ShopContainer/>
         </div>

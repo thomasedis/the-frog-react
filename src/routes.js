@@ -8,7 +8,8 @@ import NotFound from './components/notFound/NotFound'
 import Login from './components/login/Login'
 import Register from './components/login/Register'
 import Blogs from './components/blogs/Blogs'
-import Aboute from './components/aboute/Aboute'
+
+import About from './components/about/About'
 const routes = [
     {
         path: '/',
@@ -47,9 +48,9 @@ const routes = [
         main: ()=> <Blogs/>
     },
     {
-        path: '/aboute',
+        path: '/about',
         exact: true,
-        main: ()=> <Aboute/>
+        main: ()=> <About/>
     },
    
     {

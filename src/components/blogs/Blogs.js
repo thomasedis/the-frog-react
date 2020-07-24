@@ -2,9 +2,12 @@ import React from 'react'
 
 export default function Blogs() {
     return (
-        <div>
-            <h1>BLOGS</h1>
-            <span>Coming soon</span>
+        <div className="grid blog-wrapper">
+            <div className="grid wide">
+                <div className="blog">
+                    <h1>COMING SOON</h1>
+                </div>
+            </div>   
         </div>
     )
 }

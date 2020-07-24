@@ -6,6 +6,7 @@ export default function Header() {
     return (
         <>
             <HeaderTop/>
+            <div className="grid header-wrapper-under">
             <div className="grid header-wrapper" id="header-wrapper">
                 <div className="grid wide">
                 <div className="row no-gutters header">  
@@ -31,8 +32,10 @@ export default function Header() {
                     <div className="l-6 m-6"> 
                  
                         <div className="header__logo">       
-                            <Link to="/"><img src="https://res.cloudinary.com/the-frog/image/upload/v1594302107/the-frog-main/frog-with-hat_xhj4er.png" alt="imagee" className="header__logo-imgMain" /></Link> 
-                            <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302108/the-frog-main/logo_border_jhvojf.png" alt="imagee" className="header__logo-imgBorder" />
+                            {/* <Link to="/"><img src="https://res.cloudinary.com/the-frog/image/upload/v1594302107/the-frog-main/frog-with-hat_xhj4er.png" alt="imagee" className="header__logo-imgMain" /></Link>  */}
+                            <Link to="/"><img src="./image/3.png" alt="imagee" className="header__logo-imgMain" /></Link> 
+                            {/* <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302108/the-frog-main/logo_border_jhvojf.png" alt="imagee" className="header__logo-imgBorder" /> */}
+                           
                         </div>
             
                     </div>
@@ -42,6 +45,7 @@ export default function Header() {
                 </div>
                 </div>
             </div>  
+            </div>
         </>    
     )
 }

@@ -1,0 +1,14 @@
+.blog-wrapper{
+    background-image: url("https://res.cloudinary.com/the-frog/image/upload/v1594302106/the-frog-main/bg_banner_dgfxhs.png");
+    background-color: rgba(0,0,0,0.7);  
+}
+.blog{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    h1{
+        color: $color-secondary-light;
+    }
+}
