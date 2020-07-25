@@ -2,9 +2,7 @@
     background-color: $color-primary;
     // padding-top:200px;
     position: relative;
-    @include mobie{
-        padding-top: 120px;
-    }
+   
 }
 .cartsMain{
     color: $text-color;
@@ -14,8 +12,9 @@
         font-size: 3rem;
         font-weight: bold;
         color: $color-secondary-light;
+        text-transform: uppercase;
         @include mobie{
-            padding: 25px;
+            padding: 15px;
             font-size: 2rem;
         }
     }
@@ -99,7 +98,7 @@
                     font-size: 1.6rem;
                     @include mobie{
                         font-size: 1rem;
-                        padding: 0 2px;
+                        padding: 0 4px;
                     }
                 }
                 .control{
@@ -151,12 +150,18 @@
                 }                     
             }
             &-price{
+                div{
+                    padding-top: 8px;
+                }
                 @include mobie{
                     font-size: 1rem;
                 }
                 
             }
             &-total{
+                div{
+                    padding-top: 8px;
+                }
                 @include mobie{
                     font-size: 1rem;
                 }

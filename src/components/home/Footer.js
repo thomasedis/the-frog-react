@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="grid wide">
             <div className="footer-wrap">
                 <div className="row no-gutter">
-                <div className="l-4 m-4">
+                <div className="l-4 m-4 c-12">
                     <div className="footer__left">
                     <h1>THE FROG</h1>
                     <span className="description">This a streetwear fashion brand, a local brand in Vietnam. The Frog gradually expanded the market during the development of branches across the country, bringing a very unique culture of The Frog.</span>
@@ -18,7 +18,7 @@ export default function Footer() {
                     </div>
                     </div>
                 </div>
-                <div className="l-4 m-4">
+                <div className="l-4 m-4 c-12">
                     <div className="footer__center">
                     <h1>CONTACT</h1>
                     <div className="footer__center-address">
@@ -32,7 +32,7 @@ export default function Footer() {
                     </div>
                     </div>
                 </div>
-                <div className="l-4 m-4">
+                <div className="l-4 m-4 c-12">
                     <div className="footer__right">
                         <h1>NEWSLETTER</h1>
                         <span>Get instant updates about our new products and special promos!</span>

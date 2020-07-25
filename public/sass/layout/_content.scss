@@ -93,6 +93,10 @@
                 span{
                     font-weight: bold;
                 }
+                @include mobie{
+                    height: 30px;
+                    font-size: 1.3rem;
+                }
             }
         }
         &-overlay{
@@ -136,6 +140,9 @@
         height: 100%;
         width: 100%;
         padding: 0 10px;
+    }
+    @include mobie{
+        height: 380px;
     }
 }
 

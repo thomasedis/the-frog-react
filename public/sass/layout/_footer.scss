@@ -1,6 +1,9 @@
 .footer{
     .footer-wrap{
         padding: 50px 0;
+        @include mobie{
+            padding: 10px 0;
+        }
     }
     background-color: $color-primary;
     color: white;
@@ -24,7 +27,9 @@
             padding-bottom: 10px;
             @include mobie{
                 font-size: 1rem;
+                padding: 0 15px;
             }
+
         }
         &-social{
             display: flex;
@@ -48,12 +53,22 @@
                     margin-right: 5px;
                 }
             }
+            @include mobie{
+                justify-content: center;
+            }
+        }
+        @include mobie{
+            text-align: center;
         }
     }
     &__center{
         padding: 10px 0;
         div{
             color: rgb(216, 216, 216);
+            @include mobie{
+                display: flex;
+                justify-content: center;
+            }
         }
         span{ 
             color: rgb(216, 216, 216);
@@ -67,6 +82,9 @@
             overflow: auto;
             font-size: 1rem;
         }
+        @include mobie{
+            text-align: center;
+        }
     }
     &__right{
         padding: 10px 0;
@@ -75,6 +93,12 @@
             justify-content: center;
             img{
                 height: 100px;
+                @include mobie{
+                    height: 60px;
+                }
+            }
+            @include mobie{
+                margin-top: 5px;
             }
         }
         &-payment{
@@ -97,6 +121,11 @@
                 outline: none;
                 border-radius: 5px;
                 color: #999;
+                @include mobie{
+                    height: 30px;
+                    width: 75%;
+                    font-size: 1.4rem;
+                }
             }
             button{
                 width: 30%;
@@ -111,12 +140,17 @@
                 &:hover{
                     color: rgb(209, 209, 209);
                 }
+                @include mobie{
+                    width: 25%;
+                    padding: 5px;
+                }
             }
         }
         span{
              color: rgb(216, 216, 216);
         }
         @include mobie{
+            text-align: center;
             font-size: 1rem;
         }
     }

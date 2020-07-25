@@ -46,7 +46,9 @@ export default function Carts() {
                     <span>{cart.category[0]}</span>
                     </div>
                 </td>
-                <td className="cartsMain__content-products-price">${cart.newPrice}</td>
+                <td className="cartsMain__content-products-price">
+                    <div> ${cart.newPrice}</div>
+                </td>
                 <td>
                     <div className="cartsMain__content-products-quantity">
                         <button><span onClick={()=> updateQuantityCart(cart, cart.quantity - 1)} className="control">-</span></button>
@@ -56,7 +58,7 @@ export default function Carts() {
                     </div>
                 </td>
                 <td className="cartsMain__content-products-total">
-                    $ {cartItemPriceTotal(cart)}
+                   <div>$ {cartItemPriceTotal(cart)}</div> 
                 </td>
                 <td className="cartsMain__content-products-remove"><button><span onClick={()=> deleteCart(cart)}>X</span></button> </td>
             </tr>

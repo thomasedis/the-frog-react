@@ -4,6 +4,9 @@
 // }
 .deal-content{
     padding: 20px 0;
+    @include mobie{
+        padding: 5px;
+    }
 }
 .deal{
     &__title{
@@ -16,6 +19,9 @@
             margin: 0;
             // animation: heartBeat 0.3s infinite linear;
             // animation-duration: 3s;
+            @include mobie{
+                font-size: 3rem;
+            }
         }
     }
     &__left{
@@ -60,6 +66,9 @@
                 padding: 0 5px;
             }
         }
+        @include mobie{
+            height: 400px;
+        }
     }
     &__right{
         height: 100%;
@@ -74,6 +83,9 @@
             padding: 10px 0;
             text-align: center;
             z-index: 5;
+            @include mobie{
+                font-size: 1.4rem;
+            }
         }
 
         &-countdown{
@@ -138,6 +150,9 @@
                 height: 200px;
                 animation: jello 0.3s infinite linear;
                 animation-duration: 2s;
+            }
+            @include mobie{
+                display: none;
             }
         }
     }

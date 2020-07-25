@@ -6,6 +6,9 @@
 .selling-wrapper{
    padding: 50px 0;
    padding-top: 20px;
+   @include mobie{
+       padding: 20px 0;
+   }
 }
 .selling{
     &__title{
@@ -19,6 +22,9 @@
             font-weight: bold;
             animation: heartBeat 0.3s infinite linear; /* referring directly to the animation's @keyframe declaration */
             animation-duration: 3s;
+            @include mobie{
+                font-size: 2.5rem;
+            }
         }
     }
     &__slide{
@@ -28,6 +34,9 @@
         &-item-padding{
             padding: 0 20px;
             outline: none;
+            @include mobie{
+                padding: 0 5px;
+            }
         }
         &-item{
             width: 100%;
@@ -67,6 +76,9 @@
                     height: 100%;
                     width: 100%;
                     padding: 10px 10px;
+                    @include mobie{
+                        padding: 5px;
+                    }
                 }
                 &__sub{
                     position: absolute;
@@ -99,6 +111,9 @@
                     }
                    
                 }
+                @include mobie{
+                    height: 200px;
+                }
             }
            
             &--content{
@@ -113,8 +128,15 @@
                     font-size: 2.5rem;
                     font-weight: bold;
                     transition: 0.2s all;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    overflow: hidden;
                     &:hover{
                         color: $color-secondary-light;
+                    }
+                    @include mobie{
+                        font-size: 1.8rem;
                     }
                 }
                 .price{
@@ -129,6 +151,9 @@
                        
                         font-weight: bold;
                         padding: 0 5px;
+                    }
+                    @include mobie{
+                        font-size: 1.4rem;
                     }
                 }
             }

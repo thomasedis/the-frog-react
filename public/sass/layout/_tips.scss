@@ -28,6 +28,11 @@
 }
 .tips{
     padding-bottom: 30px;
+    h1{
+        font-size: 2rem;
+        color: #999;
+        text-align: center;
+    }
     &__title{
         text-align: center;
         padding: 20px 0;
@@ -37,6 +42,9 @@
             font-weight: bold;
             color: $color-secondary-light;
             margin: 0;
+            @include mobie{
+                font-size: 3rem;
+            }
         }
     }
     &__content{

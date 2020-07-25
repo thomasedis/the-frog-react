@@ -28,6 +28,9 @@
                 transform: translateY(150%);
                 animation-duration: 1s;
             };
+            @include mobie{
+                padding: 0;
+            }
         }
         &-text{
            position: absolute;
@@ -43,18 +46,42 @@
                color: $color-secondary-light;
                text-align: center;
                padding: 10px 0;
+               @include mobie{
+                   font-size: 3rem;
+                   text-align: left;
+               }
            }
            .sub-title{
                font-size: 1.5rem;
             
                font-weight: 300;
+               @include mobie{
+                   font-size: 1.4rem;
+                   margin-top: 5px;
+               }
            }
            .sub-title2{
                font-size: 1.5rem;
                color: #999;
                font-weight: 300;
+               @include mobie{
+                    display: inline-block;
+                    height: 100px;
+                    width: 37%;
+                    font-size: 1.3rem;
+               }
+           }
+           @include mobie{
+                top: 12%;
+                padding: 0 9px;
            }
         }
+        @include mobie{
+            height: 350px;
+        }
+    }
+    @include mobie{
+        height: 350px;
     }
 }
 

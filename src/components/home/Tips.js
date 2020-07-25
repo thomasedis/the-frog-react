@@ -21,7 +21,7 @@ export default function Tips() {
                 <div className="tips__title">
                     <h1>TIPS</h1>
                 </div>
-                <div className="row no-gutter"> 
+                {/* <div className="row no-gutter"> 
                     <Slider className="tips__content" {...settings}>
                     <div className="tips__contents-item-padding">
                         <div className="tips__content-item">
@@ -90,6 +90,8 @@ export default function Tips() {
                     </div> 
                     </Slider>
                 </div>
+                 */}
+                 <h1>COMING SOON</h1>
                 </div>
             </div>
             </div>

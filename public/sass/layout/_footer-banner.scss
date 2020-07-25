@@ -11,6 +11,7 @@
         align-items: center;
         padding: 10px 0;
         cursor: pointer;
+        height: 100%;
         &:hover{
             .icon{
                 transform: scale(1.3);
@@ -22,12 +23,19 @@
             font-size: 4rem;
             transition: 0.2s all;
             color: $color-secondary;
+            @include mobie{
+                font-size: 2.5rem;
+                padding: 0 5px;
+            }
         }
         .sub{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
+            @include mobie{
+                font-size: 1.1rem;
+            }
         }
     }
 }

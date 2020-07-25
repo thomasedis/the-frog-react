@@ -7,7 +7,7 @@ export default function FooterBanner() {
             <div className="grid wide">
                 <div className="footer-banner">
                 <div className="row no-gutter">
-                    <div className="l-4 m-4">
+                    <div className="l-4 m-4 c-4">
                     <div className="footer-banner__item">
                         <span className="icon"><i className="fa fa-shipping-fast" aria-hidden="true" /></span>
                         <div className="sub">
@@ -16,7 +16,7 @@ export default function FooterBanner() {
                         </div>
                     </div>
                     </div>
-                    <div className="l-4 m-4">
+                    <div className="l-4 m-4 c-4">
                     <div className="footer-banner__item">
                         <span className="icon"><i className="fa fa-credit-card" aria-hidden="true" /></span>
                         <div className="sub">
@@ -25,7 +25,7 @@ export default function FooterBanner() {
                         </div>
                     </div>
                     </div>
-                    <div className="l-4 m-4">
+                    <div className="l-4 m-4 c-4">
                     <div className="footer-banner__item">
                         <span className="icon"><i className="fa fa-headset" aria-hidden="true" /></span>
                         <div className="sub">
