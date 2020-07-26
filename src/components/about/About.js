@@ -13,7 +13,7 @@ export default function About() {
                     </div>
                     <div className="about__fanpage">
                         <h2>FANPAGE</h2>
-                        <div class="fb-page" data-href="https://www.facebook.com/thefrog.streetwear" data-tabs="none" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" allowfullscreen="true"><blockquote cite="https://www.facebook.com/thefrog.streetwear" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/thefrog.streetwear">Fanpage Facebook The Frog</a></blockquote></div>
+                        <div class="fb-page" data-href="https://www.facebook.com/thefrog-streetwear" data-tabs="none" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/thefrog-streetwear" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/thefrog-streetwear">The Frog</a></blockquote></div>
                     </div>
                 </div>
             </div>

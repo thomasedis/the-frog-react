@@ -29,9 +29,12 @@
 .tips{
     padding-bottom: 30px;
     h1{
-        font-size: 2rem;
+        font-size: 3rem;
         color: #999;
         text-align: center;
+        @include mobie{
+            font-size: 2rem;
+        }
     }
     &__title{
         text-align: center;
