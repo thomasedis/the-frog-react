@@ -17,7 +17,7 @@ export default function ShopTop(props) {
     
     return (
         <div className="shop-top">
-            <div className="grid wide">
+            <div className="grid">
                 <div className="shop-top__title">
                     <h1>{category ? category : 'SHOP'}</h1>
                 </div>

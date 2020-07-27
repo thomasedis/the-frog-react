@@ -571,7 +571,7 @@ html {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
 .content {
-  height: 550px;
+  height: 650px;
   width: 100%;
   padding: 30px 0;
   display: flex; }
@@ -1363,7 +1363,7 @@ html {
 .shop {
   width: 100%;
   display: flex;
-  padding: 10px 0;
+  padding: 10px 30px;
   justify-content: center; }
   .shop__fanPage {
     width: 100%;
@@ -1524,7 +1524,7 @@ html {
         .shop__content-sort--icon:hover {
           color: #212121; }
     .shop__content-item {
-      height: 400px;
+      height: 500px;
       width: 100%;
       padding: 10px;
       background-color: #484848; }

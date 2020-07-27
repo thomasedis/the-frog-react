@@ -9,7 +9,7 @@ import {
   Route
 } from "react-router-dom";
 import FooterBanner from './components/home/FooterBanner';
-import MessengerCustomerChat from 'react-messenger-customer-chat';
+
 function App() {
   
   useEffect(() => {
@@ -31,6 +31,7 @@ function App() {
     <Router>   
      <Notifications/>
       <Menu/>
+      
       <Switch>
          {showContentMenu(routes)}
        
@@ -38,11 +39,7 @@ function App() {
       </Switch>
       <FooterBanner/>
       <Footer/>
-      <MessengerCustomerChat
-      pageId="103209014809754"
-      appId="1176651109373972"
-      htmlRef="<REF_STRING>"
-    />
+      
     </Router>   
   );
 }

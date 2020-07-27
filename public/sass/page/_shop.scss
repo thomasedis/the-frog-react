@@ -63,7 +63,7 @@
 .shop{
     width: 100%;
     display: flex;
-    padding: 10px 0;
+    padding: 10px 30px;
     justify-content: center;
     &__fanPage{
         width: 100%;
@@ -275,7 +275,7 @@
             }
         }
         &-item{
-            height: 400px;
+            height: 500px;
             width: 100%;
             padding: 10px;
             background-color: $color-primary-light;

@@ -82,7 +82,7 @@ export default function ShopCategory() {
             </div>
              */}
              <div className="shop__fanPage">
-                <div class="fb-page" data-href="https://www.facebook.com/thefrog.streetwear" data-tabs="none" data-width="300" data-height="auto" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" allowfullscreen="true"><blockquote cite="https://www.facebook.com/thefrog.streetwear" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/thefrog.streetwear">Fanpage Facebook The Frog</a></blockquote></div>
+                <div class="fb-page" data-href="https://www.facebook.com/thefrog.streetwear" data-tabs="none" data-width="365" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" allowfullscreen="true"><blockquote cite="https://www.facebook.com/thefrog.streetwear" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/thefrog.streetwear">Fanpage Facebook The Frog</a></blockquote></div>
              </div>
             
         </div>

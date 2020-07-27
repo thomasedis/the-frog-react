@@ -65,7 +65,7 @@ export default function Header() {
                  
                         <div className="header__logo">       
                             {/* <Link to="/"><img src="https://res.cloudinary.com/the-frog/image/upload/v1594302107/the-frog-main/frog-with-hat_xhj4er.png" alt="imagee" className="header__logo-imgMain" /></Link>  */}
-                            <Link to="/"><img src="./image/3.png" alt="imagee" className="header__logo-imgMain" /></Link> 
+                            <Link to="/"><img src="https://res.cloudinary.com/the-frog/image/upload/v1595844420/the-frog-main/3_brr1oa.png" alt="imagee" className="header__logo-imgMain" /></Link> 
                             {/* <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302108/the-frog-main/logo_border_jhvojf.png" alt="imagee" className="header__logo-imgBorder" /> */}
                            
                         </div>

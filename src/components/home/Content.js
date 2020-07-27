@@ -10,7 +10,7 @@ export default function Content() {
       });
     return (
         <div className="grid content-wrapper">
-            <div className="grid wide">
+            <div className="grid ">
             <div className="row no-gutters">
                 <div className="content">
                 <div className="l-4 m-4 col">

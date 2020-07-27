@@ -6,7 +6,7 @@ export default function ShopContainer() {
    
     return (
         <div className="shop-content-wrapper">
-            <div className="grid wide">
+            <div className="grid">
             <div className="shop">
                 <div className="row no-gutters" />
                 <div className="l-3 m-3">
