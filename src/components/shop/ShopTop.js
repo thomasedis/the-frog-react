@@ -12,6 +12,15 @@ export default function ShopTop(props) {
         arrows: false,
         pauseOnHover: false,
         draggable: true,
+        responsive: [
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 1,
+              }
+            }
+          ]
       };
     const category = props.category
     
@@ -21,8 +30,8 @@ export default function ShopTop(props) {
                 <div className="shop-top__title">
                     <h1>{category ? category : 'SHOP'}</h1>
                 </div>
-                <Slider className="shop-top__slide" {...settings}>
-                    <div className="shop-top__slide-item">
+                <Slider className="shop-top__slide row" {...settings}>
+                    <div className="shop-top__slide-item ">
                         <Link to="/shops/t-shirt">
                             <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302648/shop-top/s_tshirt_fln3if.png" alt="imgg" />
                         </Link>

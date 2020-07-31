@@ -62,7 +62,7 @@ export default function Header() {
                         </div>
                     </div> 
                     <div className="l-6 m-6 c-6"> 
-                 
+                
                         <div className="header__logo">       
                             {/* <Link to="/"><img src="https://res.cloudinary.com/the-frog/image/upload/v1594302107/the-frog-main/frog-with-hat_xhj4er.png" alt="imagee" className="header__logo-imgMain" /></Link>  */}
                             <Link to="/"><img src="https://res.cloudinary.com/the-frog/image/upload/v1595844420/the-frog-main/3_brr1oa.png" alt="imagee" className="header__logo-imgMain" /></Link> 

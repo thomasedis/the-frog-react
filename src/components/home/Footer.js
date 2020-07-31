@@ -11,10 +11,9 @@ export default function Footer() {
                     <h1>THE FROG</h1>
                     <span className="description">This a streetwear fashion brand, a local brand in Vietnam. The Frog gradually expanded the market during the development of branches across the country, bringing a very unique culture of The Frog.</span>
                     <div className="footer__left-social">
-                        <span><i className="fab fa-facebook-square" /></span>
-                        <span><i className="fab fa-instagram" /></span>
-                        <span><i className="fab fa-youtube" /></span>
-                        <span><i className="fa fa-envelope" aria-hidden="true" /></span>
+                        <a href="https://www.facebook.com/thefrog.streetwear/" target="_blank"><i className="fab fa-facebook-square" /></a>
+                        <a href="https://www.instagram.com/thefrog.streetwear/" target="_blank"><i className="fab fa-instagram" /></a>
+                        <a href="mailto:thefrog.streetwear@gmail.com" target="_blank"><i className="fa fa-envelope" aria-hidden="true" /></a>
                     </div>
                     </div>
                 </div>

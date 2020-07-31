@@ -18,7 +18,7 @@ export default function TshirtShop() {
                 <div className="l-3 m-3">
                     <ShopCategory/>
                 </div>
-                <div className="l-9 m-9">
+                <div className="l-9 m-9 c-12">
                 <SubShopContent categories={category}/>
                 </div>
             </div>

@@ -18,6 +18,7 @@ export default function Login() {
     }
     function handleFormSubmit(e){
         e.preventDefault();
+       
         if(email && password){
         Axios.post("https://api-the-frog.herokuapp.com/user/login", { email, password})
             .then(res => {

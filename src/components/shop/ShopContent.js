@@ -66,7 +66,7 @@ export default function ShopContent() {
     data.length ? 
     shopItem = dataTemp.map((item)=>{
         return(
-            <div className="l-4 m-4 content-item-padding" key={item._id}>
+            <div className="l-4 m-4 c-6 content-item-padding" key={item._id}>
                 <div className="shop__content-item" data-aos="fade-up" >
                 <div className="shop__content-item--img">
                     <img src={item.image} alt="imgg" />

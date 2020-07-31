@@ -21,7 +21,7 @@ function Home() {
             {/* Content */}
                 <Content/>
             {/* Selling */}
-                <Selling/>
+                {/* <Selling/> */}
         </div>
   
         <div className="backround-deal-tips">

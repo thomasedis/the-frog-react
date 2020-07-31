@@ -20,6 +20,10 @@
                 width: 200px;
                 background-color: $color-secondary-light;
                 left: 120%;
+                @include mobie {
+                    width: 60px;
+                    height: 1px;
+                }
             }
             &::after{
                 content: '';
@@ -29,6 +33,13 @@
                 width: 200px;
                 background-color: $color-secondary-light;
                 right: 120%;
+                @include mobie{
+                    width: 60px;
+                    height: 1px;
+                }
+            }
+            @include mobie{
+                font-size: 2rem;
             }
         }
     }
@@ -36,7 +47,7 @@
         display: flex;
         padding: 20px 0;
         &-item{
-          
+            
             padding: 10px;
             margin: 0 10px;
             cursor: pointer;
@@ -52,7 +63,18 @@
                 height: 70px;
                 margin: 0 auto;
                 transition: 0.2s all;
+                @include mobie{
+                    height: 50px;
+                }
             }
+            @include mobie{
+                margin: 0;
+                padding: 0;
+                outline: none;
+            }
+        }
+        @include mobie{
+            padding: 5px;
         }
     }
 }
@@ -234,6 +256,9 @@
             }
             
         }
+        @include mobie{
+            display: none;
+        }
     }
 
     &__contentBackground{
@@ -375,7 +400,10 @@
                             color: $color-secondary-light;
                         }
                     }
-                    
+                    @include mobie{
+                        height: 50px;
+                        font-size: 1rem;
+                    }
                 }
                 .price{
                     span{
@@ -386,7 +414,15 @@
                         text-decoration: line-through;
                         color: #999;
                     }
+                    @include mobie{
+                        font-size: 1rem;
+                        padding-top: 5px;
+                    }
                 }
+            }
+            @include mobie{
+                height: 340px;
+                padding: 5px;
             }
         }
         &-pagination{
@@ -429,8 +465,14 @@
                 }
             }
         }
+        @include mobie{
+            margin: 0;
+            padding: 0 5px;
+        }
     }
-   
+    @include mobie{
+        padding: 0;
+    }
 }
 
 .detailProduct-wrapper{

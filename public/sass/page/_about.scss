@@ -8,11 +8,17 @@
         padding: 30px 0;
         text-transform: uppercase;
         color: $color-secondary-light;
+        @include mobie{
+            padding: 10px 0;
+        }
     }
     p{
         text-align: center;
         margin: 0 auto;
         padding: 30px 0;
+        @include mobie{
+            padding: 10px 0;
+        }
     }
     &__fanpage{
         width: 30%;

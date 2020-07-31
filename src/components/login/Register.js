@@ -31,6 +31,7 @@ export default function Register() {
 
     function handleFormSubmit(e){ 
         e.preventDefault();
+        
         if(firstName && lastName && phone && email && password && password2){
             Axios.post("https://api-the-frog.herokuapp.com/user/register",{firstName, lastName, phone, email, password, password2})
                 .then(res => {
@@ -51,7 +52,15 @@ export default function Register() {
                 .catch (err => console.log(err) )
         }
         else{
-
+            if(!firstName || !lastName || !phone){
+                notify.show("Vui lòng nhập đủ thông tin cần thiết !", "error", 1500);
+            }
+            else if(!email){
+                notify.show("Vui lòng nhập email !", "error", 1500);
+            }
+            else if(!password || !password2){
+                notify.show("Bạn chưa nhập password !", "error", 1500);
+            }
         }
         
     }

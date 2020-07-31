@@ -4,10 +4,7 @@
 }
 .banner{
     height: 500px;
-    display: flex;
-    .slick-list{
-        height: 100%;
-    }
+  
     &__item{
         // height: 100%;
         display: flex;
@@ -15,6 +12,7 @@
         background-size: contain;
         height: 500px;
         outline: none;
+        position: relative;
         &-img{
           
             height: 100%;
@@ -72,12 +70,13 @@
                }
            }
            @include mobie{
-                top: 12%;
+                top: 30%;
                 padding: 0 9px;
            }
         }
         @include mobie{
             height: 350px;
+            overflow: hidden;
         }
     }
     @include mobie{
