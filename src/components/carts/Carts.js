@@ -67,7 +67,7 @@ export default function Carts() {
     let cartEmpty = (
         <div>
             <div className="cartEmpty">
-                <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302107/the-frog-main/cart-empty_w0epv2.png"/>
+                <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302107/the-frog-main/cart-empty_w0epv2.png" alt="imgg"/>
             </div>
         </div>
     )

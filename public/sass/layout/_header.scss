@@ -1,12 +1,28 @@
+
 .header-wrapper{
     // background-color: $color-primary-dark; 
-    
+    overflow: hidden;
+    position: relative;
     background-image: url('../../image/bg-frog.png');
     background-color: rgba(0,0,0,0.98); 
     background-size: contain;
-  
     border-bottom: 1px solid rgb(71, 71, 71);
-  
+    &-bg{
+        background-image: url('../../image/bg-frog.png');
+        background-color: rgba(0,0,0,0.98); 
+        background-size: contain;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 100%;
+        left: 0;
+        transition: 0.2s all;
+        animation: pulse 5s linear infinite;
+        animation-duration: 3s;
+        @include mobie{
+            display: none;
+        }
+    }
    
 }
 
@@ -16,11 +32,14 @@
     width: 100%;
     display: flex;
     align-items: center;
+    z-index: 10;
     &__menuMobie{
         display: none;
+        z-index: 100;
         &-iconMenu{
             padding: 0px 11px;
             font-size: 2.5rem;
+            z-index: 10;
         }
         &-sub{
             position: fixed;
@@ -94,6 +113,7 @@
     &__search{
         width: 100%;
         position: relative;
+        z-index: 10;
         &-input{
             input{
                 height: 45px;
@@ -214,6 +234,8 @@
         }
         &-imgMain{
             transform: scale(0.82);
+            animation: flash 15s linear;
+            animation-duration: 15s;
         }
         &-imgBorder{
             position: absolute;
@@ -235,6 +257,7 @@
         cursor: pointer;
         transition: 0.2s all;
         position: relative;
+        z-index: 10;
         &-icon{
             a{
                 color: $color-secondary-light;

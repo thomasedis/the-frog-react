@@ -20,6 +20,7 @@ export default function ShopContent() {
     // const [page, setPage] = useState(1)
     // const [limit] = useState(9)
     const data = useSelector(state => state.shops)
+
     useEffect(() => {
         dispatch(actions.actFetchShopsRequest())
          // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -101,7 +102,10 @@ export default function ShopContent() {
     shopItem = (
         <>
             <div className="loading-shop">
-                <img src="https://res.cloudinary.com/the-frog/image/upload/v1594452127/shop-top/13f94b50bd090b8f88811959cdb96cfb_z1zds1.gif" alt="imgg"></img>
+                <div className="loading-wrap">
+                    <h2 className="loading-wrap-main animate__animated animate__jello">Loading...</h2>
+                    <img className="loading-wrap-border" src="https://res.cloudinary.com/the-frog/image/upload/v1594302108/the-frog-main/logo_border_jhvojf.png" alt="imgg"/>
+                </div>
             </div>
         </>
     )

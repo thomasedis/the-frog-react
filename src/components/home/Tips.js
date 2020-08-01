@@ -1,18 +1,18 @@
 import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+// import Slider from "react-slick";
 export default function Tips() {
-    const settings= {
-        dots: true,
-        arrows: false,
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        pauseOnHover: false,
-      };
+    // const settings= {
+    //     dots: true,
+    //     arrows: false,
+    //     infinite: true,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 1,
+    //     autoplay: true,
+    //     autoplaySpeed: 3000,
+    //     pauseOnHover: false,
+    //   };
     return (
         <div className="grid">
             <div className="tips-wrapper">

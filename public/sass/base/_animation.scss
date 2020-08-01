@@ -16,7 +16,16 @@
         transform: translateY(0);
     }
 }
-@keyframes logo{
+@keyframes header-bg{
+    0%{
+    transform: translateX(0) ;
+    }
+    100%{
+        transform: translateX(100%) ;
+    }
+   
+}
+@keyframes loading-frog{
     0%{
         transform: rotate(0);
     }
