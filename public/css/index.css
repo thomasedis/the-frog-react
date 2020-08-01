@@ -467,6 +467,9 @@ html {
     .header__cart:hover .header__cart-sub {
       transition: 0.2s all;
       display: block; }
+      @media (max-width: 767px) {
+        .header__cart:hover .header__cart-sub {
+          display: none; } }
     @media (max-width: 767px) {
       .header__cart {
         padding: 0 5px; } }
@@ -1695,15 +1698,24 @@ html {
 .detailProduct {
   display: flex;
   align-items: center; }
+  @media (max-width: 767px) {
+    .detailProduct {
+      flex-direction: column; } }
   .detailProduct__image {
     flex: 6;
     display: flex;
     justify-content: center; }
     .detailProduct__image img {
-      border-radius: 10px; }
-    .detailProduct__image .image-gallery-slide-wrapper.bottom button svg {
-      height: 60px;
-      width: 25px; }
+      border-radius: 10px;
+      outline: none; }
+      @media (max-width: 767px) {
+        .detailProduct__image img {
+          border-radius: 0; } }
+    .detailProduct__image .image-gallery-slide-wrapper.bottom button {
+      outline: none; }
+      .detailProduct__image .image-gallery-slide-wrapper.bottom button svg {
+        height: 60px;
+        width: 25px; }
   .detailProduct__content {
     flex: 4; }
     .detailProduct__content-sub {
@@ -1714,6 +1726,9 @@ html {
         text-transform: uppercase;
         font-size: 3rem;
         text-align: center; }
+        @media (max-width: 767px) {
+          .detailProduct__content-sub h1 {
+            font-size: 2.5rem; } }
       .detailProduct__content-sub .category {
         text-transform: uppercase;
         margin-bottom: 10px;
@@ -1970,10 +1985,23 @@ html {
       .cartsMain__bottom {
         padding: 10px 0; } }
 
+.cartEmpty {
+  display: flex;
+  justify-content: center;
+  padding: 50px; }
+  .cartEmpty img {
+    height: 250px; }
+    @media (max-width: 767px) {
+      .cartEmpty img {
+        height: 150px; } }
+
 .login-wrapper {
   background-image: url("https://res.cloudinary.com/the-frog/image/upload/v1594302106/the-frog-main/bg_banner_dgfxhs.png");
   background-color: rgba(0, 0, 0, 0.7);
   padding: 20px 0; }
+  @media (max-width: 767px) {
+    .login-wrapper {
+      padding: 0; } }
 
 .login {
   padding: 30px;
@@ -1984,6 +2012,15 @@ html {
   -moz-box-shadow: 0px 0px 18px 3px #474747;
   box-shadow: 0px 0px 18px 3px #474747;
   background-color: rgba(0, 0, 0, 0.3); }
+  @media (max-width: 767px) {
+    .login {
+      padding: 20px;
+      margin: 0;
+      border-radius: 0; } }
+  @media (max-width: 767px) {
+    .login {
+      flex-direction: column;
+      align-items: center; } }
   .login__left {
     flex: 5;
     display: flex;
@@ -1992,11 +2029,18 @@ html {
     align-items: center; }
     .login__left img {
       height: 200px; }
+      @media (max-width: 767px) {
+        .login__left img {
+          height: 90px; } }
     .login__left-content {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center; }
+      @media (max-width: 767px) {
+        .login__left-content {
+          font-size: 1.3rem;
+          text-align: center; } }
       .login__left-content span {
         padding-top: 10px; }
       .login__left-content--create {
@@ -2019,12 +2063,53 @@ html {
           border-radius: 10px; }
           .login__left-content--create a:hover {
             background-color: #999; }
+        @media (max-width: 767px) {
+          .login__left-content--create {
+            display: none; } }
+      .login__left-content--create-mobie {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: none; }
+        @media (max-width: 767px) {
+          .login__left-content--create-mobie {
+            display: flex;
+            margin-top: 5px; } }
+        .login__left-content--create-mobie span {
+          padding: 10px; }
+          @media (max-width: 767px) {
+            .login__left-content--create-mobie span {
+              font-size: 1.5rem;
+              padding-top: 10px; } }
+        .login__left-content--create-mobie a {
+          margin-top: 5px;
+          display: inline-block;
+          padding: 10px 25px;
+          background-color: #484848;
+          cursor: pointer;
+          transition: 0.2s all;
+          text-decoration: none;
+          color: #ebebeb;
+          border-radius: 10px; }
+          .login__left-content--create-mobie a:hover {
+            background-color: #999; }
+          @media (max-width: 767px) {
+            .login__left-content--create-mobie a {
+              font-size: 1.3rem;
+              padding: 5px 15px;
+              margin-top: 5px; } }
   .login__right {
     flex: 5;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    @media (max-width: 767px) {
+      .login__right {
+        padding-top: 10px;
+        width: 100%; } }
     .login__right h1 {
       margin-bottom: 30px; }
     .login__right form {

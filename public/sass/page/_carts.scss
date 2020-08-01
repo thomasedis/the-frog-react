@@ -214,4 +214,14 @@
     }
   
 }
-
+.cartEmpty{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    img{
+        height: 250px;
+        @include mobie{
+            height: 150px;
+        }
+    }
+}

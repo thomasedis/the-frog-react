@@ -79,8 +79,6 @@ export default function Register() {
                             </div>
                             <div className="login__left-content">
                                 <h1>WELCOME TO THE FROG</h1>
-                                <span>To access your account you need to login first</span>
-                                
                                 {/* <div className="login__left-content--create">
                                     <span>Do not have an account?</span>
                                     <Link to="/register">Create a new account</Link>

@@ -2,10 +2,17 @@
     background-image: url("https://res.cloudinary.com/the-frog/image/upload/v1594302106/the-frog-main/bg_banner_dgfxhs.png");
     background-color: rgba(0,0,0,0.7);
     padding: 20px 0;
+    @include mobie{
+        padding: 0;
+    }
 }
 
 .login{
-    
+    @include mobie{
+        padding: 20px;
+        margin: 0;
+        border-radius: 0;
+    }
     padding: 30px;
     margin: 50px 0;
     border-radius: 20px;
@@ -14,6 +21,10 @@
     -moz-box-shadow: 0px 0px 18px 3px rgb(71, 71, 71);
     box-shadow: 0px 0px 18px 3px rgb(71, 71, 71);
     background-color: rgba(0,0,0,0.3);
+    @include mobie{
+        flex-direction: column;
+        align-items: center;
+    }
     &__left{
         flex: 5;
         
@@ -23,8 +34,15 @@
         align-items: center;
         img{
             height: 200px;
+            @include mobie{
+                height: 90px;
+            }
         }
         &-content{
+            @include mobie{
+                font-size: 1.3rem;
+                text-align: center;
+            }
             display: flex;
             
             flex-direction: column;
@@ -57,11 +75,55 @@
                         background-color: #999;
                     }
                 }
-                
+                @include mobie{
+                    display: none;
+                }
+            }
+            &--create-mobie{
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                display: none;
+                @include mobie{
+                    display: flex;
+                    margin-top: 5px;
+                }
+                span{
+                    padding: 10px;
+                    @include mobie{
+                        font-size: 1.5rem;
+                        padding-top: 10px ;
+                    }
+                }
+                a{
+                    margin-top: 5px;
+                    display: inline-block;
+                    padding: 10px 25px;
+                    background-color: $color-primary-light;
+                    cursor: pointer;
+                    transition: 0.2s all;
+                    text-decoration: none;
+                    color: $text-color;
+                    border-radius: 10px;
+                    &:hover{
+                        background-color: #999;
+                    }
+                    @include mobie{
+                        font-size: 1.3rem;
+                        padding: 5px 15px;
+                        margin-top: 5px;
+                    }
+                }
             }
         }
     }
     &__right{
+        @include mobie{
+            padding-top: 10px ;
+            width: 100%;
+        }
         flex: 5;
         display: flex;
         flex-direction: column;

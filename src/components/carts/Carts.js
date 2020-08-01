@@ -64,34 +64,44 @@ export default function Carts() {
             </tr>
         )
     })
-
+    let cartEmpty = (
+        <div>
+            <div className="cartEmpty">
+                <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302107/the-frog-main/cart-empty_w0epv2.png"/>
+            </div>
+        </div>
+    )
+    let cartBody = (
+        <div className="cartsMain">
+            <div className="cartsMain__title">
+                Your Cart
+            </div>
+            <div className="cartsMain__content">
+                <table>
+                <tbody>
+                    <tr className="cartsMain__content-top">
+                        <th>Products</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Remove</th>
+                    </tr>
+                    {cartItem}
+                </tbody></table>
+            </div>
+            <div className="cartsMain__bottom">
+                <div className="cartsMain__bottom-content">
+                <span className="cartsMain__bottom-content--total">Subtotal: $ {totalPriceCart(carts)}</span>
+                <span className="cartsMain__bottom-content--redirect">Check Out</span>
+                </div>
+            </div>
+        </div>
+            
+    )
     return (
         <div className="grid carts-wrapper">
             <div className="grid wide">
-                <div className="cartsMain">
-                    <div className="cartsMain__title">
-                        Your Cart
-                    </div>
-                    <div className="cartsMain__content">
-                        <table>
-                        <tbody>
-                            <tr className="cartsMain__content-top">
-                                <th>Products</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Total</th>
-                                <th>Remove</th>
-                            </tr>
-                            {cartItem}
-                        </tbody></table>
-                    </div>
-                    <div className="cartsMain__bottom">
-                        <div className="cartsMain__bottom-content">
-                        <span className="cartsMain__bottom-content--total">Subtotal: $ {totalPriceCart(carts)}</span>
-                        <span className="cartsMain__bottom-content--redirect">Check Out</span>
-                        </div>
-                    </div>
-                </div>
+                {carts.length ===0 ? cartEmpty : cartBody}  
             </div>
         </div>
     )

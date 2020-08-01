@@ -99,6 +99,10 @@ export default function Login() {
                                 
                                 <button type="submit">LOGIN</button>
                                 <a href="/s">Forgot password</a>
+                                <div className="login__left-content--create-mobie">
+                                    <span>Do not have an account?</span>
+                                    <Link to="/account/register">Create a new account</Link>
+                                </div>
                                 <div className="login-more">
                                    
                                     <span className="login-more__title">Login using</span>
