@@ -144,6 +144,9 @@
     @include mobie{
         height: 310px;
     }
+    @include tablet{
+        height: 500px;
+    }
 }
 
 .content2{

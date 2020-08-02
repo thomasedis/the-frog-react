@@ -104,6 +104,9 @@
             color: $color-secondary-light;
             width: 100%;
             text-align: center;
+            @include tablet{
+                font-size: 1.2rem;
+            }
         }
         &-wrap{
             padding-top: 10px;
@@ -126,10 +129,12 @@
                         color: $color-secondary-light;
                     }
                 }
+                @include tablet{
+                    font-size: 1.3rem;
+                }
             }
             li a.shop__category-active{
                 color: $color-secondary-light;
-                font-size: 1.5rem;
                 font-weight: bold;
             }
             a{
@@ -404,6 +409,10 @@
                         height: 50px;
                         font-size: 1rem;
                     }
+                    @include tablet{
+                        height: 55px;
+                        font-size: 1.1rem;
+                    }
                 }
                 .price{
                     span{
@@ -421,8 +430,14 @@
                 }
             }
             @include mobie{
-                height: 340px;
+                height: 325px;
                 padding: 5px;
+            }
+            @include tablet{
+                height: 330px;
+            }
+            @include tablet-plus{
+                height: 400px;
             }
         }
         &-pagination{
@@ -661,5 +676,14 @@
         @include mobie{
             height: 300px;
         }
+    }
+}
+.shop__coming{
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    h2{
+        padding: 10px;
+        color: $color-secondary-light;
     }
 }

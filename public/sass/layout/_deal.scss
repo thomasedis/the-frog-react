@@ -45,6 +45,9 @@
                 border-radius: 55px;
                 border: 5px solid #999;
             }
+            @include tablet{
+                height: 75%;
+            }
         }
         &-title{
             font-size: 2rem;
@@ -153,6 +156,10 @@
             }
             @include mobie{
                 display: none;
+            }
+            @include tablet{
+                top: -55px;
+                right: 0;
             }
         }
     }

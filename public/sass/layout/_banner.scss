@@ -34,7 +34,7 @@
            position: absolute;
            top: 25%;
            padding: 10px 100px;
-           width: 900px;
+           width: 100%;
            span{
                display: block;
            }
@@ -42,11 +42,15 @@
                font-size: 5rem;
                font-weight: bold;
                color: $color-secondary-light;
-               text-align: center;
+               text-align: left;
                padding: 10px 0;
                @include mobie{
                    font-size: 3rem;
                    text-align: left;
+               }
+               @include tablet{
+                   text-align: left;
+                   padding: 10px 30px;
                }
            }
            .sub-title{
@@ -62,16 +66,23 @@
                font-size: 1.5rem;
                color: #999;
                font-weight: 300;
+               display: inline-block;
+               width: 700px;
                @include mobie{
                     display: inline-block;
-                    height: 100px;
-                    width: 37%;
+                    width: 350px;
                     font-size: 1.3rem;
+               }
+               @include tablet{
+                   width: 500px;
                }
            }
            @include mobie{
                 top: 30%;
                 padding: 0 9px;
+           }
+           @include tablet{
+               padding: 0 10px;
            }
         }
         @include mobie{

@@ -12,7 +12,7 @@ export default function FooterBanner() {
                         <span className="icon"><i className="fa fa-shipping-fast" aria-hidden="true" /></span>
                         <div className="sub">
                         <span>Free Ship</span>
-                        <span>From $10</span>
+                        <span>Từ 2 sản phẩm</span>
                         </div>
                     </div>
                     </div>

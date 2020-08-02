@@ -2,6 +2,7 @@ import React from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import * as actions from '../../actions/shops/index' 
 import {notify} from 'react-notify-toast';
+import { Link } from 'react-router-dom';
 export default function Carts() {
     
     const carts = useSelector(state => state.carts)
@@ -44,23 +45,20 @@ export default function Carts() {
                     <div className="cartsMain__content-products-sub">
                     <h2>{cart.name}</h2>
                     <span>{cart.category[0]}</span>
+                    <span>{cart.newPrice}</span>
                     </div>
-                </td>
-                <td className="cartsMain__content-products-price">
-                    <div> ${cart.newPrice}</div>
                 </td>
                 <td>
                     <div className="cartsMain__content-products-quantity">
-                        <button><span onClick={()=> updateQuantityCart(cart, cart.quantity - 1)} className="control">-</span></button>
+                        <button><span onClick={()=> updateQuantityCart(cart, cart.quantity - 1)} className="control"><i class="fas fa-chevron-left"></i></span></button>
                         <span>{cart.quantity}</span>
-                        <button><span onClick={()=> updateQuantityCart(cart, cart.quantity + 1)} className="control">+</span></button>
-                        
+                        <button><span onClick={()=> updateQuantityCart(cart, cart.quantity + 1)} className="control"><i class="fas fa-chevron-right"></i></span></button>
                     </div>
                 </td>
                 <td className="cartsMain__content-products-total">
                    <div>$ {cartItemPriceTotal(cart)}</div> 
                 </td>
-                <td className="cartsMain__content-products-remove"><button><span onClick={()=> deleteCart(cart)}>X</span></button> </td>
+                <td className="cartsMain__content-products-remove"><button><span onClick={()=> deleteCart(cart)}><i class="far fa-trash-alt"></i></span></button> </td>
             </tr>
         )
     })
@@ -80,19 +78,18 @@ export default function Carts() {
                 <table>
                 <tbody>
                     <tr className="cartsMain__content-top">
-                        <th>Products</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
-                        <th>Remove</th>
+                        <th className="cartsMain__content-top--products">Sản phẩm</th>
+                        <th className="cartsMain__content-top--quantity">Số lượng</th>
+                        <th className="cartsMain__content-top--total">Tổng tiền</th>
+                        <th className="cartsMain__content-top--delete">Xóa</th>
                     </tr>
                     {cartItem}
                 </tbody></table>
             </div>
             <div className="cartsMain__bottom">
                 <div className="cartsMain__bottom-content">
-                <span className="cartsMain__bottom-content--total">Subtotal: $ {totalPriceCart(carts)}</span>
-                <span className="cartsMain__bottom-content--redirect">Check Out</span>
+                <span className="cartsMain__bottom-content--total">Tổng tiền: $ {totalPriceCart(carts)}</span>
+                <Link to="checkout"><span className="cartsMain__bottom-content--redirect">Thanh toán</span></Link>
                 </div>
             </div>
         </div>

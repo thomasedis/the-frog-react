@@ -50,6 +50,15 @@ export default function Header() {
                                 <label htmlFor="header__menuMobie--IDinput" className="header__menuMobie-sub--btnClose">
                                     <i className="fas fa-times" />
                                 </label>
+                                <div className="header__menuMobie-sub--logo">
+                                    <img src="https://res.cloudinary.com/the-frog/image/upload/v1596286455/the-frog-main/Asset_21_wdwz4i.png" alt="imgg" />
+                                </div>
+                                <div className="header__menuMobie-sub--search">
+                                    <div className="header__search-input customMobie">
+                                        <input type="text" placeholder="Search ..." />
+                                        <button> <i className="fa fa-search" aria-hidden="true" /></button>
+                                    </div>
+                                </div>
                                 <ul>
                                     <MenuLink label='HOME' to='/' activeOnlyWhenExact={true} />
                                     <MenuLink label='SHOP' to='/shops' activeOnlyWhenExact={false} />
@@ -72,7 +81,7 @@ export default function Header() {
                     </div>
                 </div>
                 </div>
-                <div className="header-wrapper-bg animate__animated animate__pulse animate__slow"></div>
+                <div className="header-wrapper-bg"></div>
             </div>  
          
         </>    

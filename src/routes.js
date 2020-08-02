@@ -10,6 +10,7 @@ import Register from './components/login/Register'
 import Blogs from './components/blogs/Blogs'
 
 import About from './components/about/About'
+import Checkout from './components/checkout/Checkout'
 const routes = [
     {
         path: '/',
@@ -51,6 +52,11 @@ const routes = [
         path: '/about',
         exact: true,
         main: ()=> <About/>
+    },
+    {
+        path: '/checkout',
+        exact: true,
+        main: ()=> <Checkout />
     },
    
     {
