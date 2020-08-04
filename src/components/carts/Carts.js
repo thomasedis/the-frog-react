@@ -7,14 +7,23 @@ export default function Carts() {
     
     const carts = useSelector(state => state.carts)
     const dispatch = useDispatch()
+    function priceDiscount(item){
+        if(item){
+            let price = item.price
+            if(item.priceDiscount !== 0){
+                price = item.price * ((100 - item.percentDiscount)/100)
+                }
+                return price;
+            }   
+        }
     const cartItemPriceTotal = (cart) =>{
-        return cart.quantity * cart.newPrice
+        return cart.quantity * priceDiscount(cart)
     }
     const totalPriceCart = (carts) =>{
         let total = 0;
         if(carts){
             for(var i = 0; i< carts.length; i++){
-                total += carts[i].quantity * carts[i].newPrice
+                total += carts[i].quantity * priceDiscount(carts[i])
             }
         }
     
@@ -45,7 +54,7 @@ export default function Carts() {
                     <div className="cartsMain__content-products-sub">
                     <h2>{cart.name}</h2>
                     <span>{cart.category[0]}</span>
-                    <span>{cart.newPrice}</span>
+                    <span>{priceDiscount(cart)}.000₫</span>
                     </div>
                 </td>
                 <td>
@@ -56,7 +65,7 @@ export default function Carts() {
                     </div>
                 </td>
                 <td className="cartsMain__content-products-total">
-                   <div>$ {cartItemPriceTotal(cart)}</div> 
+                   <div>$ {cartItemPriceTotal(cart)}.000₫</div> 
                 </td>
                 <td className="cartsMain__content-products-remove"><button><span onClick={()=> deleteCart(cart)}><i class="far fa-trash-alt"></i></span></button> </td>
             </tr>
@@ -88,7 +97,7 @@ export default function Carts() {
             </div>
             <div className="cartsMain__bottom">
                 <div className="cartsMain__bottom-content">
-                <span className="cartsMain__bottom-content--total">Tổng tiền: $ {totalPriceCart(carts)}</span>
+                <span className="cartsMain__bottom-content--total">Tổng tiền: $ {totalPriceCart(carts)}.000₫</span>
                 <Link to="checkout"><span className="cartsMain__bottom-content--redirect">Thanh toán</span></Link>
                 </div>
             </div>

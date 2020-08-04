@@ -505,6 +505,9 @@
         flex: 6;
         display: flex;
         justify-content: center;
+        overflow: hidden;
+        outline: none;
+        padding: 0 20px;
         img{
             border-radius: 10px;
             outline: none;
@@ -520,6 +523,21 @@
                     width: 25px;
                 }
         }
+        }
+        .image-gallery-content .image-gallery-slide .image-gallery-image{
+            max-height: 500px;
+        }
+        .image-gallery-left-nav{
+            left: 15%;
+            @include mobie{
+                left: 0;
+            }
+        }
+        .image-gallery-icon.image-gallery-right-nav{
+            right: 15%;
+            @include mobie{
+                right: 0;
+            }
         }
         
     }

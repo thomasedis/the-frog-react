@@ -60,7 +60,15 @@ export default function ShopContent() {
             return b.newPrice - a.newPrice
         })   
     } 
-
+    function priceDiscount(item){
+        if(item){
+            let price = item.price
+            if(item.priceDiscount !== 0){
+                price = item.price * ((100 - item.percentDiscount)/100)
+            }
+            return price;
+        }   
+    }
     
     // data.length <=9 ? dataTemp = data : dataTemp = data.splice(1,9)
     let shopItem
@@ -90,8 +98,8 @@ export default function ShopContent() {
                         <Link to={`/${item._id}`}><h2>{item.name}</h2></Link> 
                     </div>
                     <div className="price">
-                        <span className="old">$ {item.oldPrice}</span>
-                        <span className="new">$ {item.newPrice}</span>
+                        <span className="old">{ item.price}.000₫</span>
+                        <span className="new">{priceDiscount(item)}.000₫</span>
                     </div>
                 </div>
                 </div>

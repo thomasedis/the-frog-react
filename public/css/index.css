@@ -1795,7 +1795,10 @@ html {
   .detailProduct__image {
     flex: 6;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    overflow: hidden;
+    outline: none;
+    padding: 0 20px; }
     .detailProduct__image img {
       border-radius: 10px;
       outline: none; }
@@ -1807,6 +1810,18 @@ html {
       .detailProduct__image .image-gallery-slide-wrapper.bottom button svg {
         height: 60px;
         width: 25px; }
+    .detailProduct__image .image-gallery-content .image-gallery-slide .image-gallery-image {
+      max-height: 500px; }
+    .detailProduct__image .image-gallery-left-nav {
+      left: 15%; }
+      @media (max-width: 767px) {
+        .detailProduct__image .image-gallery-left-nav {
+          left: 0; } }
+    .detailProduct__image .image-gallery-icon.image-gallery-right-nav {
+      right: 15%; }
+      @media (max-width: 767px) {
+        .detailProduct__image .image-gallery-icon.image-gallery-right-nav {
+          right: 0; } }
   .detailProduct__content {
     flex: 4; }
     .detailProduct__content-sub {

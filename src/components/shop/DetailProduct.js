@@ -32,18 +32,27 @@ export default function DetailProduct() {
     }
     const images = [
         {
-          original: `${dataDetail[0].image}`,
-          thumbnail: `${dataDetail[0].image}`,
+          original: `${dataDetail[0].imageArr[0].img}`,
+          thumbnail: `${dataDetail[0].imageArr[0].img}`,
         },
         {
-            original: `${dataDetail[0].image}`,
-            thumbnail: `${dataDetail[0].image}`,
+            original: `${dataDetail[0].imageArr[1].img}`,
+            thumbnail: `${dataDetail[0].imageArr[1].img}`,
         },
         {
-        original: `${dataDetail[0].image}`,
-        thumbnail: `${dataDetail[0].image}`,
-        },
+            original: `${dataDetail[0].imageArr[1].img}`,
+            thumbnail: `${dataDetail[0].imageArr[1].img}`,
+        }
       ];
+    function priceDiscount(item){
+    if(item){
+        let price = item.price
+        if(item.priceDiscount !== 0){
+            price = item.price * ((100 - item.percentDiscount)/100)
+            }
+            return price;
+        }   
+    }
     return (
        <div className="grid detailProduct-wrapper">
             <div className="grid wide">
@@ -51,7 +60,7 @@ export default function DetailProduct() {
                     <div className="detailProduct__image">
                         
                       {/* <img src={dataDetail[0].image} alt="imgg"/> */}
-                      <ImageGallery items={images} showFullscreenButton={false} showPlayButton={false}/>
+                      <ImageGallery items={images} showFullscreenButton={false} showPlayButton={false} originalClass="detailProduct__image-img"/>
                      
                     </div>
                     <div className="detailProduct__content">
@@ -59,8 +68,8 @@ export default function DetailProduct() {
                             <h1>{dataDetail[0].name}</h1>
                             <span className="category">{dataDetail[0].category[0]}</span>
                             <div className="price">
-                                <span className="oldPrice">$ {dataDetail[0].oldPrice}</span>
-                                <span className="newPrice">$ {dataDetail[0].newPrice}</span>
+                                <span className="oldPrice">{dataDetail[0].price}.000₫</span>
+                                <span className="newPrice">{priceDiscount(dataDetail[0])}.000₫</span>
                             </div>
                         </div>
                         <div className="detailProduct__content-size">
