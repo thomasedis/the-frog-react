@@ -1,8 +1,13 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import HeaderTop from './HeaderTop'
 import Carts from './Carts'
-import {Link, Route} from 'react-router-dom'
+import {useSelector} from 'react-redux'
+import {Link, Route, useLocation} from 'react-router-dom'
 export default function Header() {
+    const {pathname} = useLocation()
+    const data = useSelector(state => state.shops)
+
+    const [search, setSearch] = useState("")
     const MenuLink = ({label, to, activeOnlyWhenExact})=>{
         return(
           <Route 
@@ -17,6 +22,52 @@ export default function Header() {
           />
         )
       }
+    useEffect(()=>{
+        setSearch("")
+    },[pathname])
+    function onHandleChangeSearch(e){
+        setSearch(e.target.value)
+    }  
+    function onHandleSubmitSearch(e){
+        e.preventDefault();
+        console.log(search)
+    }
+    function priceDiscount(item){
+        if(item){
+            let price = item.price
+            if(item.priceDiscount !== 0){
+                price = item.price * ((100 - item.percentDiscount)/100)
+            }
+            return price;
+        }   
+    }
+    let styleSearch
+    let dataSearch
+    if(data.length !== 0 && search){
+        dataSearch = data.filter( item => {
+            return item.name.toLowerCase().indexOf(search.toLowerCase()) !== -1
+        })
+        
+    }
+    let searchItem 
+    dataSearch ? 
+    searchItem = dataSearch.map( item => {
+        return (
+            <div className="header__search-sub--item" key={item._id}>
+                <div className="header__search-sub--item-img">
+                <img src={item.image} alt="imgg" />
+                </div>
+                <div className="header__search-sub--item-content">
+                <Link to={`/${item._id}`} className="name">{item.name}</Link>
+                <span className="price">{priceDiscount(item)}.000₫</span>
+                </div>
+            </div>
+        )
+    }) :
+    searchItem = (
+        <div></div>
+    )
+    dataSearch ? styleSearch = { display: "flex"} : styleSearch = { display: "none"}
     return (
         <>
             <HeaderTop/>
@@ -26,20 +77,15 @@ export default function Header() {
                     <div className="l-3 m-3 c-3">
                         <div className="header__search">
                         <div className="header__search-input">
-                        <input type="text" placeholder="Search ..." />
-                        <button> <i className="fa fa-search" aria-hidden="true" /></button>
+                            <form onSubmit={onHandleSubmitSearch}>
+                                <input type="text" placeholder="Search ..." value={search} onChange={onHandleChangeSearch}/>
+                                <button type="submit"> <i className="fa fa-search" aria-hidden="true" /></button>
+                            </form>
+                            
                         </div>
-                        <div className="header__search-sub">
-                        <div className="header__search-sub--item">
-                            <div className="header__search-sub--item-img">
-                            <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302108/the-frog-main/bg_header_kl1upv.jpg" alt="imgg" />
-                            </div>
-                            <div className="header__search-sub--item-content">
-                            <span className="name">Ao Hoodie Form Rong</span>
-                            <span className="price">$ 10000</span>
-                            </div>
-                        </div>
-                        </div>
+                        <div className="header__search-sub" style= {styleSearch}>
+                            {searchItem}
+                        </div>  
                     </div>
                         <div className="header__menuMobie">
                             <input type="checkbox" className="header__menuMobie-input" id="header__menuMobie--IDinput" hidden />
@@ -59,7 +105,7 @@ export default function Header() {
                                         <button> <i className="fa fa-search" aria-hidden="true" /></button>
                                     </div>
                                 </div>
-                                <ul>
+                                <ul className="header__menuMobie-sub--content">
                                     <MenuLink label='HOME' to='/' activeOnlyWhenExact={true} />
                                     <MenuLink label='SHOP' to='/shops' activeOnlyWhenExact={false} />
                                     <MenuLink label='BLOG' to='/blogs' activeOnlyWhenExact={true} />

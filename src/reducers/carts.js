@@ -1,7 +1,7 @@
 import * as types from './../constants/ActionTypes'
 import {findIndex} from 'lodash'
-var data = JSON.parse(localStorage.getItem("CARTS"))
-var inititalState = data  ? data : []
+// var data = JSON.parse(localStorage.getItem("CARTS"))
+var inititalState = [];
 
 const myReducers = (state = inititalState, action)=>{
     switch(action.type){
@@ -17,7 +17,7 @@ const myReducers = (state = inititalState, action)=>{
             else{
                 state.push(action.item)
             }
-            localStorage.setItem("CARTS", JSON.stringify(state))
+            // localStorage.setItem("CARTS", JSON.stringify(state))
             return [...state]
         case types.UPDATE_QUANTITY_TO_CART:
         
@@ -25,19 +25,19 @@ const myReducers = (state = inititalState, action)=>{
                 return item._id === action.cart._id
             })
             if(index !== -1){
-                state[index2].quantity = action.quantity
+                state[index2].quantity = action.quantity    
             }  
-            localStorage.setItem("CARTS", JSON.stringify(state))
+            // localStorage.setItem("CARTS", JSON.stringify(state))
             return [...state]
         case types.REMOVE_TO_CART:
         
-            var index3 = findIndex(state, (item)=>{
+            var index3 = findIndex(state, (item) => {
                 return item._id === action.cart._id
             })
-            if(index3 !== -1){
-                state.splice(index3,1)
+            if(index3 !== -1) {
+                state.splice(index3, 1)
             }  
-            localStorage.setItem("CARTS", JSON.stringify(state))
+            // localStorage.setItem("CARTS", JSON.stringify(state))
             return [...state]        
         default: 
             return [...state]

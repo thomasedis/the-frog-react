@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from './Header'
-
 import {
     Route,
     Link,
@@ -22,9 +21,10 @@ const MenuLink = ({label, to, activeOnlyWhenExact})=>{
     )
   }
 export default function Menu() {
+  
     return (
         <>
-            <Header/>
+            <Header />
             <div className="grid menu-wrapper" id="menu-wrapper">
                 <div className="grid wide menu">
                 <div className="menu">

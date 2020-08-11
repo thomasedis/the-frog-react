@@ -18,6 +18,12 @@ export const actFetchShops = (shops)=>{
         shops
     }
 }
+export const actSearchShop = (name) =>{
+    return{
+        type: types.SEARCH_SHOP_FOR_NAME,
+        name
+    }
+}
 export const actAddToCart = (item) =>{
     return{
         type: types.ADD_TO_CART,

@@ -4,7 +4,7 @@
 //     // background-color: rgba(0,0,0,0.7);
 // }
 .content{
-    height: 650px;
+    height: 600px;
     width: 100%;
     padding: 30px 0;
     display: flex;
@@ -145,7 +145,7 @@
         height: 310px;
     }
     @include tablet{
-        height: 500px;
+        height: 400px;
     }
 }
 

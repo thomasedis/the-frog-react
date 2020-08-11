@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import  {notify} from 'react-notify-toast';
@@ -26,11 +26,7 @@ export default function ShopContent(props) {
     //     }
     // },[categories])
     
-    useEffect(() => {
-     
-       dispatch(actions.actFetchShopsRequest())
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+
     // const handleNext = ()=>{
     //     setPage(page +1)
     // }
@@ -46,7 +42,7 @@ export default function ShopContent(props) {
         return data.category[0] === categories
     })
    
-  
+    
     let dataTemp = [...dataMain]
     const handleSort = (e)=>{
         setValue(parseInt(e.target.value))
@@ -68,8 +64,17 @@ export default function ShopContent(props) {
             return b.newPrice - a.newPrice
         })   
     } 
+    function priceDiscount(item){
+        if(item){
+            let price = item.price
+            if(item.priceDiscount !== 0){
+                price = item.price * ((100 - item.percentDiscount)/100)
+            }
+            return price;
+        }   
+    }
    
-    
+    console.log(dataTemp)
     let shopItem
     dataMain.length !== 0 ? 
 
@@ -96,8 +101,8 @@ export default function ShopContent(props) {
                     <Link to={`/${item._id}`}><h2>{item.name}</h2></Link>
                     </div>
                     <div className="price">
-                    <span className="old">$ {item.oldPrice}</span>
-                    <span className="new">$ {item.newPrice}</span>
+                    <span className="old">{item.price}.000₫</span>
+                    <span className="new">{priceDiscount(item)}.000₫</span>
                     </div>
                 </div>
                 </div>

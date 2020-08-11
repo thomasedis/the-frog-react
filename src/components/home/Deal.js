@@ -13,18 +13,18 @@ export default function Deal() {
                     <div className="row no-gutter">
                     <div className="m-6 l-6">
                         <div className="deal__left">
-                        <div className="deal__left-img"><img src="./image/deal.jpg" alt="imgg" /></div>
-                        <div className="deal__left-title"><span>T - Shirt Vape New Collection</span></div>
+                        <div className="deal__left-img"><img src="https://res.cloudinary.com/the-frog/image/upload/v1596900550/the-frog-main/90a404df092ef570ac3f_qxay9o.jpg" alt="imgg" /></div>
+                        <div className="deal__left-title"><span>KONOHA FROG TEE - BLACK</span></div>
                         <div className="deal__left-price">
-                            <span className="deal__left-price--old">$ 600</span>
-                            <span className="deal__left-price--new">$ 300</span>
+                            <span className="deal__left-price--old">250.000đ</span>
+                            <span className="deal__left-price--new">180.000đ</span>
                         </div>
                         </div>
                     </div>
                     <div className="m-6 l-6">
                         <div className="deal__right">
                         <div className="deal__right-description">
-                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, aliquid? Lorem ipsum dolor sit amet.</span>
+                            <span>This is the first collection, 100% cotton,comfortable and designed in street fashion</span>
                         </div>
                         <div className="deal__right-countdown">
                             <div className="countdown" id="countdown" />
@@ -33,7 +33,7 @@ export default function Deal() {
                             <Link to="/shops" className="deal__right-buynow--text">BUY NOW <span className="deal__right-buynow--text-icon"> <i className="fas fa-hand-point-right" /></span></Link>
                         </div>
                         <div className="deal__right-banner">
-                            <img className="animate__animated animate__jello" src="./image/banner-deal.png" alt="imgg" />
+                            <img className="animate__animated animate__jello" src="https://res.cloudinary.com/the-frog/image/upload/v1596900397/the-frog-main/Asset_22_xnmags.png" alt="imgg" />
                         </div>
                         </div>
                     </div>

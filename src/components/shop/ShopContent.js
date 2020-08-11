@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import * as actions from '../../actions/shops/index'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
@@ -21,10 +21,10 @@ export default function ShopContent() {
     // const [limit] = useState(9)
     const data = useSelector(state => state.shops)
 
-    useEffect(() => {
-        dispatch(actions.actFetchShopsRequest())
-         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    // useEffect(() => {
+    //     dispatch(actions.actFetchShopsRequest())
+    //      // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [])
 
    
 

@@ -10,7 +10,7 @@ export default function Content() {
       });
     return (
         <div className="grid content-wrapper">
-            <div className="grid ">
+            <div className="grid wide">
             <div className="row no-gutters">
                 <div className="content">
                 <div className="l-4 m-4 col">
@@ -51,7 +51,7 @@ export default function Content() {
                 <div className="l-4 m-4 col">
                     <div className="content__center" data-aos="fade-up">
                     <div className="content__center-img">
-                        <img src="./image/t-shirt.jpg" alt="imgg" />
+                        <img src="https://res.cloudinary.com/the-frog/image/upload/v1596903707/the-frog-main/t-shirt_banner_ohhieq.jpg" alt="imgg" />
                         <div className="content__center-img--sub">
                         <span>T - SHIRT</span>
                         </div>

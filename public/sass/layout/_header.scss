@@ -44,7 +44,7 @@
         &-sub{
             position: fixed;
             background-color: $color-primary;
-            width: 60%;
+            width: 30vh;
             height: 100%;
             z-index: 100;
             top: 0;
@@ -209,7 +209,7 @@
             }
             &--item{
                 padding: 5px;
-                height: 70px;
+                height: 90px;
                 width: 100%;
                 display: flex;
                 position: relative;
@@ -231,11 +231,18 @@
                     justify-content: center;
                     align-items: flex-start;
                     .name{
-                        font-size: 1.5rem;
+                        font-size: 1.3rem;
                         display: -webkit-box;
                         -webkit-box-orient: vertical;
                         -webkit-line-clamp: 1;
                         overflow: hidden;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        text-decoration: none;
+                        color: $text-color;
+                        &:hover{
+                            color: $color-secondary-light;
+                        }
                     }
                     .price{
                         font-size: 1.3rem;

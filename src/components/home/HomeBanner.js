@@ -10,7 +10,7 @@ export default function HomeBanner() {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 5000,
         arrows: false,
         draggable: true,
@@ -25,7 +25,7 @@ export default function HomeBanner() {
             <Slider  className="banner" {...settings}>
                 <div className="banner__item">
                     <div className="banner__item-img">
-                        <img className="animate__animated animate__backInUp" src="https://res.cloudinary.com/the-frog/image/upload/v1594302109/the-frog-main/nnuu_y9wa8i.png" alt="img" />
+                        <img className="animate__animated animate__backInUp" src="https://res.cloudinary.com/the-frog/image/upload/v1596815173/the-frog-main/bg1_ltmrqd.png" alt="img" />
                     </div>
                     <div className="banner__item-text">
                         <span className="title animate__animated animate__tada animate__delay-0.5s">THE FROG</span>
@@ -35,7 +35,7 @@ export default function HomeBanner() {
                 </div>
                 <div className="banner__item">
                     <div className="banner__item-img">
-                        <img className="animate__animated animate__backInUp" src="https://res.cloudinary.com/the-frog/image/upload/v1594302109/the-frog-main/nnuu2_cjvvck.png" alt="img" />
+                        <img className="animate__animated animate__backInUp" src="https://res.cloudinary.com/the-frog/image/upload/v1596873080/the-frog-main/bg333_go9xtk.png" alt="img" />
                     </div>
                     <div className="banner__item-text">
                         <span className="title animate__animated animate__tada animate__delay-0.5s">THE FROG</span>

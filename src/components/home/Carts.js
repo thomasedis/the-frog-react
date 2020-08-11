@@ -65,7 +65,7 @@ export default function Carts() {
                             {cartItem}   
                             </div>
                         : 
-                        <div class="header__cart-sub--empty">
+                        <div className="header__cart-sub--empty">
                             <img src="https://res.cloudinary.com/the-frog/image/upload/v1594302107/the-frog-main/cart-empty_w0epv2.png" alt="imgg" />
                         </div>
                 }
