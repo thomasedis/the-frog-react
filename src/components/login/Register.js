@@ -36,10 +36,7 @@ export default function Register() {
             Axios.post("https://api-the-frog.herokuapp.com/user/register",{firstName, lastName, phone, email, password, password2})
                 .then(res => {
                     if(res.data.errors === false){
-                        console.log(res.data) 
-                        notify.show('Đăng ký tài khoản thành công !','success',1500);
-                        setRegistered(true)
-                       
+                        notify.show(`Bạn vui lòng check email: ${email} để xác nhận đăng ký tài khoản`,'success',20000); 
                     }
                     else{
                         if(res.data.errors) {

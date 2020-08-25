@@ -8,7 +8,7 @@ import NotFound from './components/notFound/NotFound'
 import Login from './components/login/Login'
 import Register from './components/login/Register'
 import Blogs from './components/blogs/Blogs'
-
+import Map from './components/Map'
 import About from './components/about/About'
 import Checkout from './components/checkout/Checkout'
 const routes = [
@@ -57,6 +57,11 @@ const routes = [
         path: '/checkout',
         exact: true,
         main: ()=> <Checkout />
+    },
+    {
+        path: '/map',
+        exact: true,
+        main: ()=> <Map />
     },
    
     {
