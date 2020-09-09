@@ -40,10 +40,9 @@ function App() {
       <Menu/>
       
       <Switch>
-         {showContentMenu(routes)}
-       
-      
+        {showContentMenu(routes)}    
       </Switch>
+        
       <FooterBanner/>
       <Footer/>
       
