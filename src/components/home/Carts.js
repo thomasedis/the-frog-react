@@ -33,7 +33,7 @@ export default function Carts() {
                     <div className="header__cart-sub--wrap--item__detail-left--category">{item.category[0]}</div>
                     </div>
                     <div className="header__cart-sub--wrap--item__detail-right">
-                    <div className="header__cart-sub--wrap--item__detail-right--price">{priceDiscount(item)}.000₫</div>
+                    <div className="header__cart-sub--wrap--item__detail-right--price">{ Intl.NumberFormat('en-VN', { maximumSignificantDigits: 3 }).format(priceDiscount(item))}.000₫</div>
                     <div onClick={()=> deleteCart(item)} className="header__cart-sub--wrap--item__detail-right--del">X</div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@ export default function Carts() {
             </div>
             <div className="header__cart-detail">
                 <div className="header__cart-detail--quantity"><span>{data.length}</span> ITEMS</div>
-                <div className="header__cart-detail--price">$ <span>{totalPrice(data)}.000₫</span></div>
+                <div className="header__cart-detail--price">$ <span>{ Intl.NumberFormat('en-VN', { maximumSignificantDigits: 3 }).format(totalPrice(data))}.000₫</span></div>
             </div>
             <div className="header__cart-sub">
                 {

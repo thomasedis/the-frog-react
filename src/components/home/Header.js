@@ -49,17 +49,21 @@ export default function Header() {
         })
         
     }
+   
     let searchItem 
     dataSearch ? 
     searchItem = dataSearch.map( item => {
+        
         return (
+          
             <div className="header__search-sub--item" key={item._id}>
                 <div className="header__search-sub--item-img">
                 <img src={item.image} alt="imgg" />
                 </div>
                 <div className="header__search-sub--item-content">
                 <Link to={`/${item._id}`} className="name">{item.name}</Link>
-                <span className="price">{priceDiscount(item)}.000₫</span>
+                <span className="price">{ Intl.NumberFormat('en-VN', { maximumSignificantDigits: 3 }).format(priceDiscount(item))}₫</span>
+                
                 </div>
             </div>
         )

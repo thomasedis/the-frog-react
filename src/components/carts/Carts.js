@@ -65,7 +65,7 @@ export default function Carts() {
                     </div>
                 </td>
                 <td className="cartsMain__content-products-total">
-                   <div>$ {cartItemPriceTotal(cart)}.000₫</div> 
+                   <div>$ {Intl.NumberFormat('en-VN', { maximumSignificantDigits: 3 }).format(cartItemPriceTotal(cart))}.000₫</div> 
                 </td>
                 <td className="cartsMain__content-products-remove"><button><span onClick={()=> deleteCart(cart)}><i class="far fa-trash-alt"></i></span></button> </td>
             </tr>
@@ -97,7 +97,7 @@ export default function Carts() {
             </div>
             <div className="cartsMain__bottom">
                 <div className="cartsMain__bottom-content">
-                <span className="cartsMain__bottom-content--total">Tổng tiền: $ {totalPriceCart(carts)}.000₫</span>
+                <span className="cartsMain__bottom-content--total">Tổng tiền: $ {Intl.NumberFormat('en-VN', { maximumSignificantDigits: 3 }).format(totalPriceCart(carts))}.000₫</span>
                 <Link to="checkout"><span className="cartsMain__bottom-content--redirect">Thanh toán</span></Link>
                 </div>
             </div>
